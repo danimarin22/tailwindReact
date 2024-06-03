@@ -95,13 +95,7 @@ export default function Home() {
                     {midCategoriesWines.map(midCategoriesWines => {
                         return (
                             <div key={midCategoriesWines.id}>
-                                <ImageCard imgSrc={midCategoriesWines.img}>
-                                    <h3 className="text-xl font-bold mb2 text-white">{midCategoriesWines.title}</h3>
-                                    <div className="flex flex-col justify-end  mt-4 w-100">
-                                        <hr />
-                                        <Link to={`/${midCategoriesWines.title}`}>View All</Link>
-                                    </div>
-                                </ImageCard>
+                                <ImageCard imgSrc={midCategoriesWines.img} title={midCategoriesWines.title} />
                             </div>
                         )
                     })}
