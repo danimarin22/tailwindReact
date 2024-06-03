@@ -1,6 +1,4 @@
-.eb-garamond-<uniquifier> {
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
+* {
+    padding: 0;
+    margin: 0;
 }

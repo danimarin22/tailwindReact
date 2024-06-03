@@ -1,4 +1,6 @@
-[
+import logoFarm from "../assets/images/homeMidLogoFarm.svg"
+import logoBlockchain from "../assets/images/homeMidLogoBlockchain.svg"
+import logoStore from "../assets/images/homeMidLogoStore.svg"[
     {
         "products": [
             {
@@ -44,6 +46,23 @@
                 "price-range": "77$ -80$",
                 "aromas": "Almond, Quince, Mango, Pineapple, Peach, Dried apricot, Passion fruit",
                 "foto": ""
+            }
+        ],
+        "midLogo": [
+            {
+                "id": 0,
+                "img": logoFarm,
+                "description": "Access Bordeaux 2023 En Primeur wines from Ex-Chateau",
+            },
+            {
+                "id": 1,
+                "img": logoBlockchain,
+                "description": "Guaranteed authenticity and traceability through blockchain",
+            },
+            {
+                "id": 2,
+                "img": logoStore,
+                "description": "Store your bottles safely in our warehouse",
             },
         ]
     }

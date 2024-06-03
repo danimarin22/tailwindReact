@@ -1,7 +1,10 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
 import { Outlet } from 'react-router-dom';
 import './App.css';
-import Sidebar, { Navbar } from './components/Sidebar';
+import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(false);
