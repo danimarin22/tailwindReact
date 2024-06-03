@@ -1,0 +1,50 @@
+[
+    {
+        "products": [
+            {
+                "id": 1,
+                "name": "Calvet Limited Release Sauvignon blanc",
+                "producer": "Les Grands Chais De France",
+                "vintage": 2021,
+                "ageing-potential": "1-2 years",
+                "desc": "Fresh, zesty citrus and crushed leaves, rich texture with a crisp and refreshing finish",
+                "price-range": "36$ - 39$",
+                "aromas": "Lemon, White flowers, Peach",
+                "foto": ""
+            },
+            {
+                "id": 2,
+                "name": "Château Haut Mouleyre",
+                "producer": "Les Grands Chais De France",
+                "vintage": 2020,
+                "ageing-potential": "1-2 years",
+                "desc": " Orchard fruit and peaches with a whiff of camomile. Quite textural and firm, with freshness and great affinity for spicy foods ",
+                "price-range": "60$ - 72$",
+                "aromas": "Lemon, White flowers, Peach",
+                "foto": ""
+            },
+            {
+                "id": 3,
+                "name": "Sec de Rayne Vigneau",
+                "producer": "Château de Rayne Vigneau",
+                "vintage": 2019,
+                "ageing-potential": "1-2 years",
+                "desc": "A concentrated and superbly elegant wine, honeyed and richly textured yet taut and dry with lingering flavour on the palate.",
+                "price-range": "56$ -60$",
+                "aromas": "Lemon, White flowers, Peach",
+                "foto": ""
+            },
+            {
+                "id": 4,
+                "name": "Château Liot 37.5cl",
+                "producer": "Marie-Amélie DAVID",
+                "vintage": 2019,
+                "ageing-potential": "5-50 years",
+                "desc": "Honeyed, with lemon curd and almond flavours, lovely sweetness offset by racy acidity. Youthful and elegant.",
+                "price-range": "77$ -80$",
+                "aromas": "Almond, Quince, Mango, Pineapple, Peach, Dried apricot, Passion fruit",
+                "foto": ""
+            },
+        ]
+    }
+]
