@@ -1,12 +1,10 @@
-import PropTypes from 'prop-types';
 import { FaBars, FaBell, FaSearch, FaUserCircle } from "react-icons/fa";
 
-export default function Navbar({ sidebarToggle, setSidebarToggle }) {
+export default function Navbar() {
     return (
         <nav className="bg-gray-900 px-4 py-3 flex justify-between">
             <div className="flex items-center text-xl">
-                <FaBars className="text-white me-4 cursor-pointer"
-                    onClick={() => setSidebarToggle(!sidebarToggle)} />
+                <FaBars className="text-white me-4 cursor-pointer" />
                 <span className="text-white font-semdibold">CruRated</span>
             </div>
             <div className="flex items-center gap-x-5">
@@ -38,8 +36,3 @@ export default function Navbar({ sidebarToggle, setSidebarToggle }) {
         </nav>
     )
 }
-
-Navbar.propTypes = {
-    sidebarToggle: PropTypes.bool.isRequired,
-    setSidebarToggle: PropTypes.func.isRequired,
-};

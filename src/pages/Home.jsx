@@ -76,7 +76,7 @@ export default function Home() {
                     />
                     <Col lg={12} sm={12} className="absolute flex flex-col text-center p-5 gap-5 text-white">
                         <p className="text-3xl mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</p>
-                        <p>Your one-stop destination for the world's most sought-after bottles.</p>
+                        <p>Your one-stop destination for the world&apos;s most sought-after bottles.</p>
                         <div className='text-center mt-20'>
                             <Button className="mb-5" text="Get Started" />
                             <Link to={"#HomeMid"} className='text-orange-300 mx-4'>

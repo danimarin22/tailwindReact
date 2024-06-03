@@ -7,7 +7,6 @@ import Navbar from './components/Navbar';
 
 
 function App() {
-  const [sidebarToggle, setSidebarToggle] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(false)
 
   const handleResize = () => {
@@ -26,11 +25,11 @@ function App() {
 
   return (
     <>
-      <div className="flex">
+      <div className={`flex ${isNavbarVisible ? 'flex-col' : 'flex-row'}`}>
         {
-          !isNavbarVisible ? <Sidebar sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle} /> : <Navbar />
+          !isNavbarVisible ? <Sidebar /> : <Navbar />
         }
-        <div className={`flex-1 ${sidebarToggle ? 'ml-64' : 'ml-16'} transition-all duration-300 ease-in-out`}>
+        <div className={`flex-1 ${isNavbarVisible ? 'ml-0' : 'ml-16'} transition-all duration-300 ease-in-out`}>
           <Outlet />
         </div>
       </div>

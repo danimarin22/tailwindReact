@@ -12,9 +12,6 @@ import Home from "./pages/Home.jsx";
 import SingleLots from "./pages/SingleLots.jsx";
 import Barrels from "./pages/Barrels.jsx";
 import Collections from "./pages/Collections.jsx";
-// import Collections from "./pages/Collections/Collections.jsx";
-// import Barrels from "./pages/Barrels/Barrels.jsx";
-// import SingleLots from "./pages/SingleLots/SingleLots.jsx";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
