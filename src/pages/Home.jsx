@@ -10,6 +10,7 @@ import collectionsSingleLots from "../assets/images/midCategoriesSingleLots.webp
 import Button from "../components/Button";
 import ImageCard from "../components/ImageCard";
 import { CiBookmark, CiHeart, CiShare2 } from "react-icons/ci";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
 
@@ -31,7 +32,7 @@ export default function Home() {
         },
     ]
 
-    const midCategories = [
+    const midCategoriesWines = [
         {
             id: 0,
             title: "Collections",
@@ -87,48 +88,27 @@ export default function Home() {
                     <Button text="Discover En Primeur" />
                 </div>
             </div>
-            <main className="flex justify-center">
-                <ImageCard imgSrc={collectionsBarrels}>
-                    <h3 className="text-xl font-bold mb2 text-white">Qualcosa</h3>
-                    <div className="space-x-4 mt-4">
-                        <button className="btn">
-                            <CiHeart />
-                        </button>
-                        <button className="btn">
-                            <CiBookmark />
-                        </button>
-                        <button className="btn">
-                            <CiShare2 />
-                        </button>
-                    </div>
-                </ImageCard>
-            </main>
-            {/* <div id="homeCategories" className="">
-                <h1>Wines</h1>
-                <p>Discover something new each week, with our masterfully curated wine collections, fractional barrels and single lot auctions.</p>
-                <div
-                    className="flex justify-around rounded-lg bg-white text-center  shadow-secondary-1 dark:bg-surface-dark dark:text-white">
-
-                    {midCategories.map(midCategories => (
-                        <div key={midCategories.id} className="flex flex-col justify-start ">
-                            <img className="relative h-60  w-60 " src={midCategories.img} alt="N/A" />
-                            <div
-                                className="absolute text:white text-white  dark:border-white/10">
-                                {midCategories.title}
+            <div className="flex flex-col justify-center">
+                <h1 className="text-3xl m-4">Wine</h1>
+                <p className="text-xl m-4">Discover something new each week, with our masterfully curated wine collections, fractional barrels and single lot auctions.</p>
+                <div className="flex flex-row justify-around m-10">
+                    {midCategoriesWines.map(midCategoriesWines => {
+                        return (
+                            <div key={midCategoriesWines.id}>
+                                <ImageCard imgSrc={midCategoriesWines.img}>
+                                    <h3 className="text-xl font-bold mb2 text-white">{midCategoriesWines.title}</h3>
+                                    <div className="flex flex-col justify-end  mt-4 w-100">
+                                        <hr />
+                                        <Link to={`/${midCategoriesWines.title}`}>View All</Link>
+                                    </div>
+                                </ImageCard>
                             </div>
-
-                            <div
-                                className="absolute mt-20 text-white border-t-2 justify-end border-neutral-100 px-6 py-3 text-surface/75 dark:border-white/10 dark:text-neutral-300">
-                                2 days ago
-                            </div>
-                        </div>
-                    ))}
-                    <div className="p-6">
-
-                    </div>
-
+                        )
+                    })}
                 </div>
-            </div> */}
+                <h1 className="text-3xl m-4">Spirits</h1>
+                <p className="text-xl m-4">Discover something new each week, with our masterfully curated spirits collections and single lot auctions.</p>
+            </div>
         </>
     );
 }
