@@ -10,9 +10,9 @@ export default function ImageCard({ imgSrc, title }) {
             group-hover:scale-105 duration-200"/>
             <div className="absolute inset-0 flex 
             items-end">
-                <div className="p-4 text-white">
+                <div className="p-4 text-white flex-1">
                     <h3 className="text-xl font-bold mb2 text-white">{title}</h3>
-                    <div className="flex flex-col justify-end  mt-4 w-100">
+                    <div className="flex flex-col justify-end  mt-4">
                         <hr />
                         <Link to={`/${title}`}>View All</Link>
                     </div>
