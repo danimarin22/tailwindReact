@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { FaHome, FaSearch } from 'react-icons/fa';
 import { GiCellarBarrels } from 'react-icons/gi';
@@ -6,16 +5,15 @@ import { LiaWineBottleSolid } from 'react-icons/lia';
 import { LuMenuSquare } from 'react-icons/lu';
 import { PiWineDuotone } from 'react-icons/pi';
 
-export default function Sidebar({ sidebarToggle }) {
+export default function Sidebar() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false)
     return (
         <nav
             aria-label="Sidebar"
             className={`
-                ${sidebarToggle ? 'hidden' : 'flex'}
                 fixed h-full flex-col items-center bg-gray-900
                 transition-all duration-300 z-10 ease-in-out
-                w-16 hover:w-64 group 
+                w-16 hover:w-64 group flex
                 ${isSidebarVisible ? 'justify-between' : 'justify-center'}
             `}
             onMouseOver={() => setIsSidebarVisible(true)}
@@ -70,9 +68,4 @@ export default function Sidebar({ sidebarToggle }) {
         </nav>
     );
 }
-
-Sidebar.propTypes = {
-    sidebarToggle: PropTypes.bool.isRequired,
-};
-
 
