@@ -73,7 +73,7 @@ export default function Home() {
                     muted
                     playsInline
                 />
-                <Col lg={12} sm={12} className="absolute flex flex-col text-center p-5 gap-5 text-white w-full">
+                <span className="absolute flex flex-col text-center p-5 gap-5 text-white w-full">
                     <p className="text-3xl mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</p>
                     <p>Your one-stop destination for the world&apos;s most sought-after bottles.</p>
                     <div className='text-center mt-20'>
@@ -82,7 +82,7 @@ export default function Home() {
                             Explore Crurated &gt;
                         </Link>
                     </div>
-                </Col>
+                </span>
             </div>
             <div id="HomeMid" className="relative text-center flex justify-center items-center overflow-hidden">
                 <img src={homeMidBg} className="absolute top-0 left-0 w-full h-full object-cover z-0" />
