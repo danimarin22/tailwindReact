@@ -12,6 +12,8 @@ import Home from "./pages/Home.jsx";
 import SingleLots from "./pages/SingleLots.jsx";
 import Barrels from "./pages/Barrels.jsx";
 import Collections from "./pages/Collections.jsx";
+import Signin from "./pages/Signin.jsx";
+import Shop from "./pages/Shop.jsx";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,8 @@ const routes = createBrowserRouter(
       <Route path="Collections" element={<Collections />} />
       <Route path="Barrels" element={<Barrels />} />
       <Route path="SingleLots" element={<SingleLots />} />
+      <Route path="Shop/page/:page" element={<Shop />} />
+      <Route path="Signin" element={<Signin />} />
       <Route path="*" element={<div>You are not where you should</div>} />
     </Route>
   )

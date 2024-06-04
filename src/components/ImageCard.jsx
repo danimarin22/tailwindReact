@@ -1,4 +1,3 @@
-import 'prop-types'
 import { Link } from 'react-router-dom'
 
 export default function ImageCard({ imgSrc, title }) {
