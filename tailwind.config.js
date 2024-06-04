@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily :(
+        "EB Garamond", "serif"
+      )
+    },
   },
   plugins: [],
   variants: {
