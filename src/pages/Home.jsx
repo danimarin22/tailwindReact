@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import videoWine from "../assets/images/wine.webm";
+import videoWine from "../assets/images/wine.mp4";
 import logoFarm from "../assets/images/homeMidLogoFarm.svg";
 import logoBlockchain from "../assets/images/homeMidLogoBlockchain.svg";
 import logoStore from "../assets/images/homeMidLogoStore.svg";
@@ -99,10 +99,10 @@ export default function Home() {
                     muted
                     playsInline
                 />
-                <span className="absolute flex flex-col text-center p-5 gap-5 text-white">
-                    <p className="text-3xl mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</p>
-                    <p>Your one-stop destination for the world&apos;s most sought-after bottles.</p>
-                    <div className='text-center mt-20'>
+                <span className="absolute flex flex-col text-center p-0 lg:p-5 gap-5 text-white">
+                    <p className="text-3xl lg:text-5xl opacity-80 mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</p>
+                    <p className="text-l lg:text-2xl opacity-50 mb-20">Your one-stop destination for the world&apos;s most sought-after bottles.</p>
+                    <div className='text-center gap-10'>
                         <Link to={"/signin"}>
                             <Button className="mb-5" text="Get Started" />
                         </Link>
@@ -128,10 +128,10 @@ export default function Home() {
                     <Button text="Discover En Primeur" />
                 </span>
             </div>
-            <div className="flex flex-col justify-center ml-5 mt-5">
-                <h1 className="text-3xl m-3">Wine</h1>
-                <p className="text-xl m-3">Discover something new each week, with our masterfully curated wine collections, fractional barrels, and single lot auctions.</p>
-                <span className="grid grid-cols-1 md:grid-cols-3 m-6 md:mx-20 gap-y-8 lg:gap-y-0">
+            <div className="flex flex-col justify-center ml-5 mt-2 ">
+                <h1 className="text-4xl m-3">Wine</h1>
+                <p className="text-2xl m-3">Discover something new each week, with our masterfully curated wine collections, fractional barrels, and single lot auctions.</p>
+                <span className="grid grid-cols-1 lg:grid-cols-3 gap-2 w-full mt-5">
                     {midCategoriesWines.map(midCategoriesWines => {
                         return (
                             <div key={midCategoriesWines.id}>
@@ -141,10 +141,10 @@ export default function Home() {
                     })}
                 </span>
             </div>
-            <div className="flex flex-col justify-center ml-5">
-                <h1 className="text-3xl m-3">Spirits</h1>
-                <p className="text-xl m-3">Discover something new each week, with our masterfully curated spirits collections and single lot auctions.</p>
-                <div className="grid grid-cols-1 md:grid-cols-3 m-6 md:mx-20 gap-y-8 lg:gap-y-0">
+            <div className="flex flex-col justify-center ml-5 mt-5">
+                <h1 className="text-4xl m-3">Spirits</h1>
+                <p className="text-2xl m-3">Discover something new each week, with our masterfully curated spirits collections and single lot auctions.</p>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 w-full mt-5">
                     {midCategoriesSpirits.map(midCategoriesSpirits => {
                         return (
                             <div key={midCategoriesSpirits.id}>

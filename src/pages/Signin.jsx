@@ -1,3 +1,7 @@
+import ShopCards from "../components/ShopCards";
+
 export default function Signin() {
-    return <div>WELCOME TO SIGN IN</div>
+    return <div>
+        <ShopCards />
+    </div>
 }
