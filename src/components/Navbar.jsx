@@ -1,10 +1,23 @@
+import { Dropdown } from "react-bootstrap";
 import { FaBars, FaBell, FaSearch, FaUserCircle } from "react-icons/fa";
 
 export default function Navbar() {
     return (
         <nav className="bg-gray-900 px-4 py-3 flex justify-between">
-            <div className="flex items-center text-xl">
-                <FaBars className="text-white me-4 cursor-pointer" />
+            <div className="flex items-center text-xl gap-1">
+                <Dropdown>
+                    <Dropdown.Toggle id="dropdown-basic">
+                        <FaBars className="text-white cursor-pointer" />
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                <div className="dropdown">
+
+                </div>
                 <span className="text-white font-semdibold">CruRated</span>
             </div>
             <div className="flex items-center gap-x-5">
