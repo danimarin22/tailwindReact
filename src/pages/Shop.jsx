@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import productsData from '../assets/data.json'
 import { useEffect, useState } from 'react';
 import imgShop from "../assets/images/shop.png"
+import ShopCards from '../components/ShopCards';
 
 export default function Shop() {
 
@@ -19,6 +20,10 @@ export default function Shop() {
         setPages(arr)
     }, [])
 
+    const shuffle = (array) => {
+        return array.sort(() => Math.random() - 0.5);
+    };
+
     return (
         <>
             <div className='flex justify-center items-center'>
@@ -28,16 +33,16 @@ export default function Shop() {
                     <p className='text-l lg:text-2xl opacity-50 text-white lg:m-20'>Discover which bottles we have in stock and ready to ship.</p>
                 </div>
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 w-full' >
-                {products.slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
-                    return (
-                        <div key={elem.id} >
-                            {elem.name}
-                            {elem.price}
-                            <img className="lg:w-32 lg:h-full" src={elem.img} alt={elem.region} />
-                        </div>
-                    )
-                })}
+            <div className='flex lg:p-10 p-6 lg:ml-16 '>
+                <div className='grid grid-cols-1 lg:grid-cols-4 lg:gap-10 gap-6 w-full' >
+                    {shuffle(products).slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
+                        return (
+                            <div key={elem.id} >
+                                <ShopCards category={elem.category} name={elem.name} img={elem.img} vintage={elem.vintage} eprice={elem.estimatedPriceMarket} price={elem.price} />
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
             <nav aria-label="Page navigation example">
                 <ul className="flex items-center -space-x-px h-10 text-base">

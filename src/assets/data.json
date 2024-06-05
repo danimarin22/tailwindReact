@@ -3,6 +3,7 @@
         "products": [
             {
                 "id": 1,
+                "category": "CASUAL",
                 "name": "Château Ausone",
                 "producer": "Château Ausone",
                 "vintage": 2021,
@@ -20,6 +21,7 @@
             },
             {
                 "id": 2,
+                "category": "CASUAL",
                 "name": "Château Cos d'Estournel",
                 "producer": "Château Cos D'estournel",
                 "vintage": 2023,
@@ -37,6 +39,7 @@
             },
             {
                 "id": 3,
+                "category": "CASUAL",
                 "name": "Château La Mission Haut-Brion",
                 "producer": "Château La Mission Haut-Brion",
                 "vintage": 2023,
@@ -54,6 +57,7 @@
             },
             {
                 "id": 4,
+                "category": "CASUAL",
                 "name": "Château Haut-Brion",
                 "producer": "Château Haut-Brion",
                 "vintage": 2023,
@@ -71,6 +75,7 @@
             },
             {
                 "id": 5,
+                "category": "CASUAL",
                 "name": "Château Cheval Blanc",
                 "producer": "Château Cheval Blanc",
                 "vintage": 2023,
@@ -88,6 +93,7 @@
             },
             {
                 "id": 6,
+                "category": "CASUAL",
                 "name": "Château Mouton Rothschild",
                 "producer": "Château Mouton Rothschild",
                 "vintage": 2023,
@@ -105,6 +111,7 @@
             },
             {
                 "id": 7,
+                "category": "CASUAL",
                 "name": "Château Lafite Rothschild",
                 "producer": "Château Lafite Rothschild",
                 "vintage": 2023,
@@ -122,6 +129,7 @@
             },
             {
                 "id": 8,
+                "category": "CASUAL",
                 "name": "Château Pontet-Canet",
                 "producer": "Château Pontet-Canet",
                 "vintage": 2023,
@@ -139,6 +147,7 @@
             },
             {
                 "id": 9,
+                "category": "CASUAL",
                 "name": "Château Léoville Las Cases",
                 "producer": "Château Léoville Las Cases",
                 "vintage": 2023,
@@ -156,6 +165,7 @@
             },
             {
                 "id": 10,
+                "category": "CASUAL",
                 "name": "Château Cantenac Brown",
                 "producer": "Château Cantenac Brown",
                 "vintage": 2023,
@@ -173,6 +183,7 @@
             },
             {
                 "id": 11,
+                "category": "CASUAL",
                 "name": "Grand-Puy-Lacoste Variation Case",
                 "producer": "Château Grand-Puy-Lacoste",
                 "vintage": 2023,
@@ -190,6 +201,7 @@
             },
             {
                 "id": 12,
+                "category": "CASUAL",
                 "name": "Clos Fourtet",
                 "producer": "Clos Fourtet",
                 "vintage": 2023,
@@ -207,6 +219,7 @@
             },
             {
                 "id": 13,
+                "category": "CASUAL",
                 "name": "Le Clarence de Haut-Brion",
                 "producer": "Château Haut-Brion",
                 "vintage": 2023,
@@ -224,6 +237,7 @@
             },
             {
                 "id": 14,
+                "category": "CASUAL",
                 "name": "Château Lynch-Bages",
                 "producer": "Château Lynch-Bages",
                 "vintage": 2023,
@@ -241,6 +255,7 @@
             },
             {
                 "id": 15,
+                "category": "CASUAL",
                 "name": "Le Petit Mouton de Mouton Rothschild",
                 "producer": "Château Mouton Rothschild",
                 "vintage": 2023,
@@ -258,6 +273,7 @@
             },
             {
                 "id": 16,
+                "category": "CASUAL",
                 "name": "Château Angelus",
                 "producer": "Château Angélus",
                 "vintage": 2023,
@@ -275,6 +291,7 @@
             },
             {
                 "id": 17,
+                "category": "CASUAL",
                 "name": "Carillon d'Angelus",
                 "producer": "Château Angélus",
                 "vintage": 2023,
@@ -292,6 +309,7 @@
             },
             {
                 "id": 18,
+                "category": "CASUAL",
                 "name": "Château L'Evangile",
                 "producer": "Château L'evangile",
                 "vintage": 2023,
@@ -309,6 +327,7 @@
             },
             {
                 "id": 19,
+                "category": "CASUAL",
                 "name": "Château Léoville Barton",
                 "producer": "Château Léoville Barton",
                 "vintage": 2023,
@@ -326,6 +345,7 @@
             },
             {
                 "id": 20,
+                "category": "CASUAL",
                 "name": "Carruades de Lafite",
                 "producer": "Château Lafite Rothschild",
                 "vintage": 2023,
