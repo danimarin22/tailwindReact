@@ -6,7 +6,7 @@ export default function Navbar() {
         <nav className="bg-gray-900 px-4 py-3 flex justify-between">
             <div className="flex items-center text-xl gap-1">
                 <Dropdown>
-                    <Dropdown.Toggle id="dropdown-basic">
+                    <Dropdown.Toggle id="dropdown-basic" className="px-4 pt-2">
                         <FaBars className="text-white cursor-pointer" />
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
