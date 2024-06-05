@@ -1,7 +1,8 @@
-import { useLocation, useParams, useSearchParams } from 'react-router-dom';
-import productsData from '../../public/data.json';
-import { Container, Row, Col } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
+import productsData from '../assets/data.json'
 import { useEffect, useState } from 'react';
+import imgShop from "../assets/images/shop.png"
+
 export default function Shop() {
 
     const products = productsData[0].products;
@@ -20,13 +21,24 @@ export default function Shop() {
 
     return (
         <>
-            {products.slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
-                return (
-                    <div key={elem.id}>
-                        {elem.name}
-                    </div>
-                )
-            })}
+            <div className='flex justify-center items-center'>
+                <img src={imgShop} className='relative w-full h-1/2 object-cover' />
+                <div className='absolute flex flex-col text-center'>
+                    <p className='text-3xl lg:text-5xl text-white mb-3 lg:m-20'>The Shop</p>
+                    <p className='text-l lg:text-2xl opacity-50 text-white lg:m-20'>Discover which bottles we have in stock and ready to ship.</p>
+                </div>
+            </div>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 w-full' >
+                {products.slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
+                    return (
+                        <div key={elem.id} >
+                            {elem.name}
+                            {elem.price}
+                            <img className="lg:w-32 lg:h-full" src={elem.img} alt={elem.region} />
+                        </div>
+                    )
+                })}
+            </div>
             <nav aria-label="Page navigation example">
                 <ul className="flex items-center -space-x-px h-10 text-base">
                     <li>
