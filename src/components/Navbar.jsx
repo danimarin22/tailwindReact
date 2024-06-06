@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <nav className="bg-gray-900 px-4 py-3 flex justify-between items-center">
-            <span className="text-xl text-white font-semibold">CruFaked</span>
+            <span className="text-xl text-white font-semibold">CruRated</span>
             <div className="text-xl gap-1  bg-gray-900">
                 <Dropdown show={isOpen} onToggle={handleToggle} className="bg-gray-900 ">
                     <Dropdown.Toggle

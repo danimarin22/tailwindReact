@@ -65,7 +65,7 @@ export default function Sidebar() {
             </ul>
             <div className={`relative p-3 w-full flex items-center justify-center ${isSidebarVisible ? 'block' : 'hidden'}`}>
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                    <FaSearch className="w-4 h-4 ml-4 text-gray-500" />
+                    <FaSearch className="w-4 h-4 ml-3 text-gray-500" />
                 </span>
                 <input
                     type="text"
