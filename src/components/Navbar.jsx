@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
 import { CiCircleList } from 'react-icons/ci';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +24,9 @@ export default function Navbar() {
                     <Dropdown.Menu className="pt-10 w-screen min-h-screen bg-gray-900 text-center" onClick={handleClose}>
                         <hr className='mt-2 mb-4 w-80 text-rose-900 text-center' />
                         <Dropdown.Item className="text-white text-center" href="/">Home</Dropdown.Item>
-                        <Dropdown.Item className="text-white text-center" href="/collections">Collections</Dropdown.Item>
+                        <Dropdown.Item className="text-white text-center" href="collections">Collections</Dropdown.Item>
                         <Dropdown.Item className="text-white text-center" href="/barrels">Barrels</Dropdown.Item>
-                        <Dropdown.Item className="text-white text-center" href="/shop/page/1">Shop</Dropdown.Item>
+                        <Dropdown.Item className="text-white text-center" to='/shop/page/1'><Link>Shop</Link></Dropdown.Item>
                         <Dropdown.Item className="text-white text-center" href="/singleLots">Single Lots</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
