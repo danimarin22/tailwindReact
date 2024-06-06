@@ -55,7 +55,6 @@ export default function Shop() {
             <div className='flex lg:p-10 p-6 lg:ml-16 '>
                 <div className='grid grid-cols-1 lg:grid-cols-4 lg:gap-10 gap-6 w-full' >
                     {products.filter(elem => {
-                        console.log(elem.name.toLowerCase().includes(nameFilter.toLowerCase()))
                         return nameFilter.trim() === "" || elem.name.toLowerCase().trim().includes(nameFilter.toLowerCase().trim())
                     }).slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
                         return (
