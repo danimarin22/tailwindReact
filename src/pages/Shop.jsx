@@ -3,13 +3,15 @@ import productsData from '../assets/data.json'
 import { useEffect, useState } from 'react';
 import imgShop from "../assets/images/shop.png"
 import ShopCards from '../components/ShopCards';
+import { FaSearch } from 'react-icons/fa';
 
 export default function Shop() {
 
-    const products = productsData[0].products;
+    let products = productsData[0].products;
     const { page } = useParams()
     const [elementsPerPage, setElementsPerPage] = useState(12)
     const [pages, setPages] = useState([])
+    const [nameFilter, setNameFilter] = useState("")
 
     useEffect(() => {
         let n = Math.ceil(products.length / elementsPerPage)
@@ -18,6 +20,8 @@ export default function Shop() {
             arr.push(i)
         }
         setPages(arr)
+
+        products = shuffle(products)
     }, [])
 
     const shuffle = (array) => {
@@ -29,13 +33,31 @@ export default function Shop() {
             <div className='flex justify-center items-center'>
                 <img src={imgShop} className='relative w-full h-1/2 object-cover' />
                 <div className='absolute flex flex-col text-center'>
-                    <p className='text-3xl lg:text-5xl text-white mb-3 lg:m-20'>The Shop</p>
+                    <p className='text-4xl lg:text-5xl text-white mb-3 lg:m-20'>The Shop</p>
                     <p className='text-l lg:text-2xl opacity-50 text-white lg:m-20'>Discover which bottles we have in stock and ready to ship.</p>
+                </div>
+            </div>
+            <div className='my-3'>
+                <p className='my-3 ml-3 text-4xl'>Shop</p>
+                <div className='relative text-center flex items-center justify-center lg:justify-start'>
+                    <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                        <FaSearch className="w-4 h-4 ml-8 text-black" />
+                    </span>
+                    <input
+                        type="text"
+                        placeholder="Search product"
+                        className="w-80 px-6 py-2 pl-10 lg:ml-6 rounded border-2 focus:outline-none"
+                        value={nameFilter}
+                        onChange={(e) => setNameFilter(e.target.value)}
+                    />
                 </div>
             </div>
             <div className='flex lg:p-10 p-6 lg:ml-16 '>
                 <div className='grid grid-cols-1 lg:grid-cols-4 lg:gap-10 gap-6 w-full' >
-                    {shuffle(products).slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
+                    {products.filter(elem => {
+                        console.log(elem.name.toLowerCase().includes(nameFilter.toLowerCase()))
+                        return nameFilter.trim() === "" || elem.name.toLowerCase().trim().includes(nameFilter.toLowerCase().trim())
+                    }).slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
                         return (
                             <div key={elem.id} >
                                 <ShopCards category={elem.category} name={elem.name} img={elem.img} vintage={elem.vintage} eprice={elem.estimatedPriceMarket} price={elem.price} />
