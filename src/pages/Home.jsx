@@ -153,12 +153,12 @@ export default function Home() {
                     })}
                 </div>
             </div>
-            <div className="flex flex-col items-center justify-between ml-5">
-                <h1 className="text-3xl m-3 text-black">Calendar</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 m-6 md:mx-20 gap-y-8 lg:gap-x-36">
+            <div className="flex flex-col items-center m-8 mt-12">
+                <h1 className="text-3xl m-3 text-black">Meet the producers</h1>
+                <div className="flex flex-col items-center justify-center ">
                     {producers.map(producers => {
                         return (
-                            <div key={producers.id}>
+                            <div className="mt-4 mb-4" key={producers.id}>
                                 <Cards imgSrc={producers.img} title={producers.title} date={producers.date} className="text-black" />
                             </div>
                         );
