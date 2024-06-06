@@ -5,6 +5,7 @@ import { LiaWineBottleSolid } from 'react-icons/lia';
 import { LuMenuSquare } from 'react-icons/lu';
 import { PiWineDuotone } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
+import logo from "../assets/images/Logo2.svg"
 import DropUpSearch from './DropUpSearch';
 
 export default function Sidebar() {
@@ -29,7 +30,7 @@ export default function Sidebar() {
             onMouseLeave={() => setIsSidebarVisible(false)}
         >
             <div className={`my-2 mb-4 flex items-center justify-center w-full ${!isDropdownActive ? 'block' : 'hidden'}`}>
-                <LuMenuSquare className="w-10 h-10 text-orange-300" />
+                <img src={logo} className="w-10 h-10 text-orange-300" />
                 <h1 className={`text-2xl text-white font-bold ml-2 ${isSidebarVisible ? 'block' : 'hidden'}`}>
                     CruRated
                 </h1>

@@ -90,24 +90,23 @@ export default function Home() {
 
     return (
         <>
-            <div className='flex justify-center items-center w-full h-screen p-0'>
+            <div className='relative flex justify-center items-center w-full h-screen p-0'>
                 <video
-                    className="relative top-0 left-0 p-0 min-h-screen object-cover z-0 w-full"
+                    className="top-0 left-0 p-0 min-h-screen object-cover z-0 w-full"
                     src={videoWine}
                     autoPlay
                     loop
                     muted
                     playsInline
                 />
-                <div className="absolute flex flex-col text-center p-5 lg:p-24 gap-y-2 lg:gap-y-5 text-white">
+                <div className="absolute flex flex-col text-center px-5 lg:p-24 gap-y-2 lg:gap-y-5 mb-20 lg:mb-0 text-white">
                     <p className="text-3xl lg:text-5xl opacity-80 mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</p>
                     <p className="text-l lg:text-2xl opacity-50 mb-20">Your one-stop destination for the world&apos;s most sought-after bottles.</p>
                     <div className='text-center gap-10'>
                         <Link to={"/signin"}>
                             <Button className="mb-5" text="Get Started" />
                         </Link>
-
-                        <Link className='text-orange-300 mx-4'>
+                        <Link className='text-orange-300 text-base lg:text-xl px-4'>
                             Explore Crurated &gt;
                         </Link>
                     </div>

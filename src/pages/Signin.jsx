@@ -1,7 +1,7 @@
 import { TERipple } from "tw-elements-react";
 import signIn from "../assets/images/signIn.webp"
 
-export default function ExampleV3() {
+export default function SignIn() {
     return (
         <section className="h-screen bg-gray-800">
             <div className="container m-0 p-0 h-full ">
