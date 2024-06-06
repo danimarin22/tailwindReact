@@ -19,11 +19,11 @@ const routes = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
-      <Route path="Collections" element={<Collections />} />
-      <Route path="Barrels" element={<Barrels />} />
-      <Route path="SingleLots" element={<SingleLots />} />
-      <Route path="Shop/page/:page" element={<Shop />} />
-      <Route path="Signin" element={<Signin />} />
+      <Route path="collections" element={<Collections />} />
+      <Route path="barrels" element={<Barrels />} />
+      <Route path="singleLots" element={<SingleLots />} />
+      <Route path="shop/page/:page" element={<Shop />} />
+      <Route path="signin" element={<Signin />} />
       <Route path="*" element={<div>You are not where you should</div>} />
     </Route>
   )
