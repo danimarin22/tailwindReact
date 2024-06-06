@@ -7,7 +7,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleToggle = () => setIsOpen(!isOpen);
-    const handleClose = () => setIsOpen(true);
+    const handleClose = () => setIsOpen(false);
 
     return (
         <nav className="bg-gray-900 px-4 py-3 flex justify-between items-center">
