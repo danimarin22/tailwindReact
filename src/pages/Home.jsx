@@ -72,18 +72,21 @@ export default function Home() {
             id: 0,
             title: "Il Marroneto",
             date: "3-9 June, 2024",
+            desc: "Discover the rich history and exquisite wines of Il Marroneto.",
             img: ilMarroneto,
         },
         {
             id: 1,
             title: "Pierre Péters",
             date: "10-16 June, 2024",
+            desc: "Explore the elegance and tradition of Champagne with Pierre Péters.",
             img: pierrePeters,
         },
         {
             id: 2,
             title: "Capreolus distillery",
             date: "3-9 June, 2024",
+            desc: "Uncover the artisanal spirits and craftsmanship at Capreolus Distillery",
             img: capreolusDistilery,
         },
     ];
@@ -128,7 +131,7 @@ export default function Home() {
                 </span>
             </div>
             <div className="flex flex-col justify-center ml-0 lg:ml-5 mt-2  ">
-                <h1 className="text-4xl m-3">Wine</h1>
+                <h1 className="text-4xl m-3">Wines</h1>
                 <p className="text-2xl m-3">Discover something new each week, with our masterfully curated wine collections, fractional barrels, and single lot auctions.</p>
                 <span className="flex flex-col items-center w-full mt-3 gap-y-10 lg:mt-5 lg:gap-y-0 lg:flex-row lg:justify-around ">
                     {midCategoriesWines.map(midCategoriesWines => {
@@ -154,12 +157,12 @@ export default function Home() {
                 </div>
             </div>
             <div className="flex flex-col items-center m-8 mt-12">
-                <h1 className="text-3xl m-3 text-black">Meet the producers</h1>
-                <div className="flex flex-col items-center justify-center ">
+                <h1 className="text-4xl m-3 text-black">Meet the producers</h1>
+                <div className="flex flex-col lg:flex-row lg:gap-x-48 items-center justify-center ">
                     {producers.map(producers => {
                         return (
                             <div className="mt-4 mb-4" key={producers.id}>
-                                <Cards imgSrc={producers.img} title={producers.title} date={producers.date} className="text-black" />
+                                <Cards imgSrc={producers.img} title={producers.title} date={producers.date} desc={producers.desc} className="text-black" />
                             </div>
                         );
                     })}
