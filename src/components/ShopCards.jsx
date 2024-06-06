@@ -18,11 +18,11 @@ export default function ShopCards({ category, name, img, vintage, eprice, price 
                     </Link>
                 </div>
             </div>
-            <div className="flex items-center justify-center w-80">
+            <div className="flex flex-col items-center justify-center w-80">
                 <Link>
                     <h3 className="text-2xl min-h-28 font-bold mt-4 text-center">{name}</h3>
                 </Link>
-                <hr className='mt-2 mb-4' />
+                <hr className='mt-2 mb-4 w-80' />
             </div>
             <img className="h-60 " src={img} alt="" />
             <div className="inset-0 flex flex-col

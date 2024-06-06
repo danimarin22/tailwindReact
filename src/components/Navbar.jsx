@@ -1,51 +1,35 @@
-import { Dropdown } from "react-bootstrap";
-import { FaBars, FaBell, FaSearch, FaUserCircle } from "react-icons/fa";
+import { useState } from 'react';
+import { Dropdown } from 'react-bootstrap';
+import { CiCircleList } from 'react-icons/ci';
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleToggle = () => setIsOpen(!isOpen);
+    const handleClose = () => setIsOpen(true);
+
     return (
-        <nav className="bg-gray-900 px-4 py-3 flex justify-between">
-            <div className="flex items-center text-xl gap-1">
-                <Dropdown>
-                    <Dropdown.Toggle id="dropdown-basic" className="px-4 pt-2">
-                        <FaBars className="text-white cursor-pointer" />
+        <nav className="bg-gray-900 px-4 py-3 flex justify-between items-center">
+            <span className="text-xl text-white font-semibold">CruFaked</span>
+            <div className="text-xl gap-1  bg-gray-900">
+                <Dropdown show={isOpen} onToggle={handleToggle} className="bg-gray-900 ">
+                    <Dropdown.Toggle
+                        id="dropdown-basic"
+                        className="px-4 pt-2 after:content-none bg-gray-900 hover:bg-gray-900 border-gray-900 hover:border-gray-900"
+                        aria-label="Menu"
+                        onClick={handleToggle}>
+                        <CiCircleList className="text-white cursor-pointer  bg-gray-900 h-6 w-6" />
                     </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        <Dropdown.Item href="/Shop/page/1">Shop</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    <Dropdown.Menu className="pt-10 w-screen min-h-screen bg-gray-900 text-center" onClick={handleClose}>
+                        <hr className='mt-2 mb-4 w-80 text-rose-900 text-center' />
+                        <Dropdown.Item className="text-white text-center" href="/">Home</Dropdown.Item>
+                        <Dropdown.Item className="text-white text-center" href="/collections">Collections</Dropdown.Item>
+                        <Dropdown.Item className="text-white text-center" href="/barrels">Barrels</Dropdown.Item>
+                        <Dropdown.Item className="text-white text-center" href="/shop/page/1">Shop</Dropdown.Item>
+                        <Dropdown.Item className="text-white text-center" href="/singleLots">Single Lots</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <div className="dropdown">
-
-                </div>
-                <span className="text-white font-semdibold">CruRated</span>
-            </div>
-            <div className="flex items-center gap-x-5">
-                <div className="relative md:w-65">
-                    <span className="relative md:absolute inset-y-0 left-0 flex items-center pl-2 ">
-                        <button className="p-1 focus:outline-none text-white md:text-black">
-                            <FaSearch />
-                        </button>
-                    </span>
-                    <input type="text" className="w-full px-4 py-1 pl-12 rounded shadow outline-none hidden md:block" />
-                </div>
-                <div className="text-white">
-                    <FaBell className="w-6 h-6" />
-                </div>
-                <div className="relative">
-                    <button className="text-white group">
-                        <FaUserCircle className="w-6 h-6 mt-1" />
-                        <div className="z-10 hidden absolute bg-white rounded-lg shadow w-32 group-focus:block top-full right-0">
-                            <ul className="py-2 text-sm text-gray-950">
-                                <li><a href="">Profile</a></li>
-                                <li><a href="">Setting</a></li>
-                                <li><a href="">Log Out</a></li>
-                            </ul>
-                        </div>
-                    </button>
-                </div>
-
             </div>
         </nav>
-    )
+    );
 }
