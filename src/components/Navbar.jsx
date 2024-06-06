@@ -26,7 +26,7 @@ export default function Navbar() {
                         <Dropdown.Item className="text-white text-center" href="/">Home</Dropdown.Item>
                         <Dropdown.Item className="text-white text-center" href="collections">Collections</Dropdown.Item>
                         <Dropdown.Item className="text-white text-center" href="/barrels">Barrels</Dropdown.Item>
-                        <Dropdown.Item className="text-white text-center" to='/shop/page/1'><Link>Shop</Link></Dropdown.Item>
+                        <Dropdown.Item className="text-white text-center"><Link to='/shop/page/1'>Shop</Link></Dropdown.Item>
                         <Dropdown.Item className="text-white text-center" href="/singleLots">Single Lots</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
