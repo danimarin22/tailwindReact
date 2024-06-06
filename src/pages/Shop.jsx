@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import productsData from '../assets/data.json'
 import { useEffect, useState } from 'react';
 import imgShop from "../assets/images/shop.png"
@@ -79,7 +79,7 @@ export default function Shop() {
                         {pages.map((elem) => {
                             return (
                                 <li key={elem}>
-                                    <a href={elem} className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{elem}</a>
+                                    <Link to={elem} className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{elem}</Link>
                                 </li>
                             )
                         })}
