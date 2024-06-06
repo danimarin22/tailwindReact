@@ -51,7 +51,7 @@ export default function Sidebar() {
                 <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
                     <Link to="/shop/page/1" className="px-3 flex items-center w-full">
                         <FaStoreAlt className="w-6 h-6 mr-2" />
-                        <span className="hidden group-hover:inline lg:inline">Store</span>
+                        <span className="hidden group-hover:inline lg:inline">Shop</span>
                     </Link>
                 </li>
                 <hr className="border-gray-600 w-full" />
