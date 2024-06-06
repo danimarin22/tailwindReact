@@ -23,11 +23,11 @@ export default function Navbar() {
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="pt-10 w-screen min-h-screen bg-gray-900 text-center" onClick={handleClose}>
                         <hr className='mt-2 mb-4 w-80 text-rose-900 text-center' />
-                        <Dropdown.Item className="text-white text-center" href="/">Home</Dropdown.Item>
-                        <Dropdown.Item className="text-white text-center" href="collections">Collections</Dropdown.Item>
-                        <Dropdown.Item className="text-white text-center" href="/barrels">Barrels</Dropdown.Item>
-                        <Dropdown.Item className="text-white text-center"><Link to='/shop/page/1'>Shop</Link></Dropdown.Item>
-                        <Dropdown.Item className="text-white text-center" href="/singleLots">Single Lots</Dropdown.Item>
+                        <Dropdown.Item onClick={handleClose} className="text-white text-center" ><Link to='/'>Home</Link></Dropdown.Item>
+                        <Dropdown.Item onClick={handleClose} className="text-white text-center" ><Link to='/collections'>Collections</Link></Dropdown.Item>
+                        <Dropdown.Item onClick={handleClose} className="text-white text-center"><Link to='/barrels'>Barrels</Link></Dropdown.Item>
+                        <Dropdown.Item onClick={handleClose} className="text-white text-center"><Link to='/shop/page/1'>Shop</Link></Dropdown.Item>
+                        <Dropdown.Item onClick={handleClose} className="text-white text-center"><Link to='/singleLots'>Single Lots</Link></Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
