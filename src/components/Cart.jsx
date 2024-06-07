@@ -25,8 +25,14 @@ const Cart = () => {
     }
 
     useEffect(() => {
-        let myProducts = allProducts[0]['products']
-        setProducts(myProducts)
+        if (!localStorage.getItem("cart")) {
+            setProducts([])
+        } else {
+            setProducts(JSON.parse(localStorage.getItem("cart")))
+            // setQuantities(products.map(elem {
+            //     return 
+            // }))
+        }
     }, [])
 
     return (

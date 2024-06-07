@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         <div className={`flex-1 ${isNavbarVisible ? 'ml-0' : 'ml-16'} transition-all duration-300 ease-in-out`}>
           <Outlet />
         </div>
-      </div>
+      </div >
     </>
   );
 }
