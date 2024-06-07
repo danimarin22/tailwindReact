@@ -102,20 +102,20 @@ export default function Home() {
                     muted
                     playsInline
                 />
-                <div className="absolute flex flex-col text-center px-5 lg:p-24 gap-y-2 lg:gap-y-5 mb-20 lg:mb-0 text-white">
+                <div className="absolute flex flex-col text-center px-5 lg:p-24 gap-y-2 lg:gap-y-5 mb-30 lg:mb-0 text-white">
                     <p className="text-3xl lg:text-5xl opacity-80 mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</p>
                     <p className="text-l lg:text-2xl opacity-50 mb-20">Your one-stop destination for the world&apos;s most sought-after bottles.</p>
                     <div className='text-center gap-10'>
                         <Link to={"/signin"}>
                             <Button className="mb-5" text="Get Started" />
                         </Link>
-                        <Link className='text-orange-300 text-base lg:text-xl px-4'>
+                        <Link to="/#HomeMid" className='text-orange-300 snap-x text-base lg:text-xl px-4'>
                             Explore Crurated &gt;
                         </Link>
                     </div>
                 </div>
             </div>
-            <div id="HomeMid" className="relative text-center flex justify-center items-center overflow-hidden pb-3 lg:pb-0 ">
+            <div id="HomeMid" className="relative snap-center text-center flex justify-center items-center overflow-hidden pb-3 lg:pb-0 ">
                 <img src={homeMidBg} className="absolute top-0 left-0 w-full h-full object-cover z-0" />
                 <span className="relative w-full min-h-screen flex flex-col justify-center lg:justify-end items-center lg:gap-y-5 text-white">
                     <h1 className="text-4xl mt-3 my-2 lg:mt-80 w-72">BORDEAUX 2023 EN PRIMEUR</h1>
