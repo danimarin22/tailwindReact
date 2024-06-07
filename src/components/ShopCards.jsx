@@ -4,7 +4,7 @@ import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoListOutline } from "react-icons/io5";
 
-export default function ShopCards({ category, name, img, vintage, eprice, price }) {
+export default function ShopCards({ id, category, name, img, vintage, eprice, price }) {
     return (
         <div className="max-w-sm min-h-full	border-2 border-gray-300 overflow-hidden shadow-lg group flex flex-col items-center">
             <div className="w-full group-hover:bg-rose-900 group-hover:text-white flex justify-between items-center">
@@ -19,7 +19,7 @@ export default function ShopCards({ category, name, img, vintage, eprice, price 
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center w-80">
-                <Link>
+                <Link to={`/shop/${id}`}>
                     <h3 className="text-2xl min-h-28 font-bold mt-4 text-center">{name}</h3>
                 </Link>
                 <hr className='mt-2 mb-4 w-80' />
@@ -35,9 +35,11 @@ export default function ShopCards({ category, name, img, vintage, eprice, price 
                     <p className="pl-3 text-s">Estimated market price:</p>
                     <Link className="text-s mr-3"> {eprice} </Link>
                 </div>
-                <button className="w-80 mb-3 hover:bg-rose-900 hover:opacity-90 hover:text-black rounded-lg p-4 shadow-lg text-xl font-normal text-white bg-rose-900">
-                    {price}
-                </button>
+                <Link to={`/shop/${id}`}>
+                    <button className="w-80 mb-3 hover:bg-rose-900 hover:opacity-90 hover:text-black rounded-lg p-4 shadow-lg text-xl font-normal text-white bg-rose-900">
+                        {price}
+                    </button>
+                </Link>
 
             </div>
         </div>
