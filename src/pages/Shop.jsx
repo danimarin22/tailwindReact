@@ -61,7 +61,7 @@ export default function Shop() {
                     }).slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
                         return (
                             <div key={elem.id} >
-                                <ShopCards category={elem.category} name={elem.name} img={elem.img} vintage={elem.vintage} eprice={elem.estimatedPriceMarket} price={elem.price} />
+                                <ShopCards id={elem.id} category={elem.category} name={elem.name} img={elem.img} vintage={elem.vintage} eprice={elem.estimatedPriceMarket} price={elem.price} />
                             </div>
                         )
                     })}
