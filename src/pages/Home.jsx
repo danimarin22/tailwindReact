@@ -105,13 +105,14 @@ export default function Home() {
                 <div className="absolute flex flex-col text-center px-5 lg:p-24 gap-y-2 lg:gap-y-5 mb-30 lg:mb-0 text-white">
                     <p className="text-3xl lg:text-5xl opacity-80 mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</p>
                     <p className="text-l lg:text-2xl opacity-50 mb-20">Your one-stop destination for the world&apos;s most sought-after bottles.</p>
-                    <div className='text-center gap-10'>
+                    <div className='flex flex-col lg:flex-row justify-center items-center text-center gap-10'>
                         <Link to={"/signin"}>
                             <Button className="mb-5" text="Get Started" />
                         </Link>
-                        <Link to="/#HomeMid" className='text-orange-300 snap-x text-base lg:text-xl px-4'>
+                        <span className='text-orange-300 snap-x text-base lg:text-xl px-4 gap-2'> <Link to="/#HomeMid" >
                             Explore Crurated &gt;
                         </Link>
+                        </span>
                     </div>
                 </div>
             </div>
