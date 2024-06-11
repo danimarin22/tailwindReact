@@ -9,13 +9,14 @@ import collectionsBarrels from "../assets/images/midCategoriesBarrels.webp";
 import collectionsSingleLots from "../assets/images/midCategoriesSingleLots.webp";
 import Button from "../components/Button";
 import ImageCard from "../components/ImageCard";
-import collectionsCategoriesSpirits from "../assets/images/collectionsCategoriesSpirits.jpg";
+import collectionsCategoriesSpirits from "../assets/images/collectionsCategoriesSpirits.webp";
 import singleLotsCategoriesSpirits from "../assets/images/singleLotsCategoriesSpirits.webp";
 import ilMarroneto from "../assets/images/ilMarroneto.webp"
 import capreolusDistilery from "../assets/images/capreolusDistilery.webp"
 import fineDining from "../assets/images/fineDining.webp"
 import pierrePeters from "../assets/images/pierrePeters.webp"
 import Cards from "../components/Cards";
+
 
 export default function Home() {
     const midLogo = [
@@ -157,22 +158,28 @@ export default function Home() {
                     })}
                 </div>
             </div>
-            <div className="flex flex-col items-center m-8 mt-12">
-                <h1 className="text-4xl m-3 text-black">Meet the producers</h1>
-                <div className="flex flex-col lg:flex-row lg:gap-x-48 items-center justify-center ">
-                    {producers.map(producers => {
-                        return (
-                            <div className="mt-4 mb-4" key={producers.id}>
-                                <Cards imgSrc={producers.img} title={producers.title} date={producers.date} desc={producers.desc} className="text-black" />
+            <div className=" bg-stone-100">
+                <div className="flex flex-col items-start m-8 mb-0 pb-10 mt-24">
+                    <h1 className="text-4xl text-black mt-10 mb-3 ">Meet the producers</h1>
+                    <p className="text-2xl my-3"> Join us in celebrating the artisans who bring passion and expertise to every bottle.</p>
+                    <div className="flex flex-col items-center w-full">
+                        <div className="flex flex-col lg:flex-row lg:gap-x-48 items-center justify-center ">
+                            {producers.map(producers => {
+                                return (
+                                    <div className="mt-4 mb-4" key={producers.id}>
+                                        <Cards imgSrc={producers.img} title={producers.title} date={producers.date} desc={producers.desc} className="text-black" />
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <div className="relative flex mt-32">
+                            <img className="h-80 opacity-90 object-cover" src={fineDining} />
+                            <div className="absolute h-60 flex flex-col justify-around m-5">
+                                <h1 className="text-3xl text-white lg:mb-20 ">Dinner in Amsterdam with Alessandro Mori from Il Marroneto</h1>
+                                <Button className="" text="Reserve your spot" />
                             </div>
-                        );
-                    })}
-                </div>
-                <div className="relative flex m-2">
-                    <img className="h-80 opacity-90 object-cover" src={fineDining} />
-                    <div className="absolute h-60 flex flex-col justify-around m-5">
-                        <h1 className="text-3xl text-white lg:mb-20 ">Dinner in Amsterdam with Alessandro Mori from Il Marroneto</h1>
-                        <Button className="" text="Reserve your spot" />
+                        </div>
+
                     </div>
                 </div>
             </div>
