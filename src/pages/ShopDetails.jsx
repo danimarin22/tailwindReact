@@ -12,13 +12,27 @@ export default function ShopDetails() {
     }, [id])
 
     function AddToCart() {
-        console.log('cart')
         if (!localStorage.getItem(("cart"))) {
-            const cart = [product]
+            const cart = [
+                {
+                    product: product,
+                    count: 1
+                }
+            ]
             localStorage.setItem('cart', JSON.stringify(cart))
         } else {
             let cart = JSON.parse(localStorage.getItem("cart"))
-            cart.push(product)
+            let index = cart.findIndex(p => p.product.id === product.id)
+
+            if (index === -1) {
+                cart.push({
+                    product: product,
+                    count: 1
+                })
+            }
+            else {
+                cart[index].count++
+            }
             localStorage.setItem('cart', JSON.stringify(cart))
         }
     }
