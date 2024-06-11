@@ -1,5 +1,7 @@
+import CollectionsCards from "../components/CollectionsCards";
+
 export default function Barrels() {
     return <div>
-        Welcome To Barrels
+        <CollectionsCards />
     </div>
 }
