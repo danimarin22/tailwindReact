@@ -51,19 +51,19 @@ export default function Collections() {
             <p className="text-l text-white lg:text-2xl mt-5 opacity-80 mb-14 lg:mb-40">Discover the most sought-after bottles, in our weekly online auctions.</p>
             <Button text="Explore Collections" />
         </div>
-        <div className="relative flex justify-center text-center w-full">
-            <img src={heroSub} className="h-screen w-full object-cover lg:h-auto" />
-            <div className="absolute flex flex-col items-center w-full top-0 px-4 ">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl my-8 lg:my-20">HOW IT WORKS?</h1>
-                <div className="flex flex-col items-center lg:flex-row lg:gap-20">
+        <div className=" flex text-center justify-center w-full">
+            <img src={heroSub} className="relative h-screen object-cover lg:h-max w-full " />
+            <div className="absolute flex flex-col ">
+                <h1 className="text-5xl my-14 lg:my-20">HOW IT WORKS?</h1>
+                <div className="flex flex-col items-center md:flex-row md:text-base lg:flex-row lg:gap-20  ">
                     {howItWorks.map(howItWorks => {
                         return (
-                            <div className="my-2 w-full max-w-xs md:max-w-sm lg:w-80" key={howItWorks.id}>
-                                <div className="flex flex-col md:flex-row my-4 justify-center items-center">
-                                    <span className="text-2xl md:text-3xl lg:text-4xl">
+                            <div className="my-2 w-80" key={howItWorks.id}>
+                                <div className="flex my-4 justify-center items-center">
+                                    <span className="text-4xl">
                                         {howItWorks.id}/
                                     </span>
-                                    <p className="text-lg md:text-xl lg:text-xl ml-2">
+                                    <p className="text-xl">
                                         {howItWorks.text}
                                     </p>
                                 </div>

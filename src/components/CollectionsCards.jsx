@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 export default function CollectionsCards({ name, desc, img }) {
     return (
         <div >
-            <div className="max-w-sm lg:max-w-7xl min-h-full border-2 border-gray-300 overflow-hidden shadow-lg group flex flex-col lg:flex-row items-center">
-                <div className="lg:px-20 m-10 lg:m-0">
+            <div className="max-w-sm m-3 lg:m-0  lg:max-w-7xl min-h-full border-2 border-gray-300 overflow-hidden shadow-lg group flex flex-col lg:flex-row items-center">
+                <div className="lg:px-20  m-2">
                     <h1 className="text-4xl lg:my-6">{name}</h1>
                     <p className="text-lg lg:my-6">Collection (3 Bottles)</p>
                     <hr className=' w-80 my-14' />

@@ -36,7 +36,7 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
                     <Link className="text-s mr-3"> {eprice} </Link>
                 </div>
                 <Link to={`/shop/${id}`}>
-                    <button className="w-80 mb-3 hover:bg-rose-900 hover:opacity-90 hover:text-black rounded-lg p-4 shadow-lg text-xl font-normal text-white bg-rose-900">
+                    <button className="min-w-80 mb-3 hover:bg-rose-900 hover:opacity-90 hover:text-black rounded-lg p-4 shadow-lg text-xl font-normal text-white bg-rose-900">
                         {price}
                     </button>
                 </Link>
