@@ -1,5 +1,5 @@
 import { FaRegCalendarPlus } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 export default function Cards({ imgSrc, title, date, desc }) {
     return (
@@ -25,4 +25,11 @@ export default function Cards({ imgSrc, title, date, desc }) {
             </div>
         </div>
     )
+}
+
+Cards.propTypes = {
+    imgSrc: PropTypes.string,
+    title: PropTypes.string,
+    date: PropTypes.string,
+    desc: PropTypes.string
 }

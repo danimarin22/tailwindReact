@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import allProducts from '../assets/data.json'
-import { json, useParams } from "react-router-dom"
-import { parse } from 'postcss'
+import { useParams } from "react-router-dom"
 import Button from '../components/Button'
 
 export default function ShopDetails() {
@@ -10,7 +9,7 @@ export default function ShopDetails() {
 
     useEffect(() => {
         setProduct(allProducts[0]['products'].filter(elem => elem.id === parseInt(id))[0])
-    }, [])
+    }, [id])
 
     function AddToCart() {
         console.log('cart')
