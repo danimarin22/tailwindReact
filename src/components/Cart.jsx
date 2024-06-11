@@ -1,5 +1,4 @@
 import { FaTrashAlt } from 'react-icons/fa';
-import allProducts from "../assets/data.json"
 import { useEffect, useState } from 'react';
 
 const Cart = () => {
