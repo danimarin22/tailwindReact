@@ -3,34 +3,54 @@ import { useEffect, useState } from 'react';
 
 const Cart = () => {
     const [products, setProducts] = useState([])
-    const [quantities, setQuantities] = useState([1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 3, 1, 1, 1, 1])
+    const [quantities, setQuantities] = useState([])
 
     const updateQuantity = (index, quantity) => {
         if (quantity < 0) return
         if (quantity === 0) removeItem(index)
-        let arr = [...quantities];
-        arr[index] = quantity
-        setQuantities(arr)
+        if (!localStorage.getItem("cart")) {
+            setProducts([])
+            setQuantities([])
+        } else {
+            let cart = JSON.parse(localStorage.getItem("cart"))
+            cart[index].count = quantity
+            setProducts(cart.map(elem => {
+                return elem.product
+            }))
+
+            setQuantities(cart.map(elem => {
+                return elem.count
+            }))
+            localStorage.setItem('cart', JSON.stringify(cart))
+        }
     }
 
     const removeItem = (index) => {
-        let myQuantities = [...quantities];
-        myQuantities = myQuantities.slice(0, index).concat(myQuantities.slice(index + 1, myQuantities.length))
-        setQuantities(myQuantities)
+        let cart = JSON.parse(localStorage.getItem("cart"))
+        cart = cart.slice(0, index).concat(cart.slice(index + 1, cart.length))
+        setProducts(cart.map(elem => {
+            return elem.product
+        }))
 
-        let myProducts = [...products];
-        myProducts = myProducts.slice(0, index).concat(myProducts.slice(index + 1, myProducts.length))
-        setProducts(myProducts)
+        setQuantities(cart.map(elem => {
+            return elem.count
+        }))
+        localStorage.setItem('cart', JSON.stringify(cart))
     }
 
     useEffect(() => {
         if (!localStorage.getItem("cart")) {
             setProducts([])
+            setQuantities([])
         } else {
-            setProducts(JSON.parse(localStorage.getItem("cart")))
-            // setQuantities(products.map(elem {
-            //     return 
-            // }))
+            let cart = JSON.parse(localStorage.getItem("cart"))
+            setProducts(cart.map(elem => {
+                return elem.product
+            }))
+
+            setQuantities(cart.map(elem => {
+                return elem.count
+            }))
         }
     }, [])
 
