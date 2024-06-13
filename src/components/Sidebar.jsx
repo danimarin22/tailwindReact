@@ -41,17 +41,17 @@ export default function Sidebar() {
                 <ul className={`w-full flex-col items-center mt-3 text-white font-bold ${isSidebarVisible ? 'block' : 'hidden'}`}>
                     <hr className="border-gray-600 w-full" />
                     <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
-                        <a href="/collections" className="px-3 flex items-center w-full">
+                        <Link to="/collections" className="px-3 flex items-center w-full">
                             <LiaWineBottleSolid className="w-6 h-6 mr-2" />
                             <span className="hidden font-light group-hover:inline lg:inline">Collections</span>
-                        </a>
+                        </Link>
                     </li>
                     <hr className="border-gray-600 w-full" />
                     <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
-                        <a href="/barrels" className="px-3 flex items-center w-full">
+                        <Link to="/barrels" className="px-3 flex items-center w-full">
                             <GiCellarBarrels className="w-6 h-6 mr-2" />
                             <span className="hidden font-light group-hover:inline lg:inline">Barrels</span>
-                        </a>
+                        </Link>
                     </li>
                     <hr className="border-gray-600 w-full" />
                     <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
@@ -62,18 +62,17 @@ export default function Sidebar() {
                     </li>
                     <hr className="border-gray-600 w-full" />
                     <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
-                        <a href="/singleLots" className="px-3 flex items-center w-full">
+                        <Link to="/singleLots" className="px-3 flex items-center w-full">
                             <PiWineDuotone className="w-6 h-6 mr-2" />
                             <span className="hidden font-light group-hover:inline lg:inline">Single Lots</span>
-                        </a>
+                        </Link>
                     </li>
                     <hr className="border-gray-600 w-full" />
-                    <hr className="border-gray-600 w-full" />
                     <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
-                        <a href="/cart" className="px-3 flex items-center w-full">
+                        <Link to="/cart" className="px-3 flex items-center w-full">
                             <PiWineDuotone className="w-6 h-6 mr-2" />
                             <span className="hidden font-light group-hover:inline lg:inline">Cart 455</span>
-                        </a>
+                        </Link>
                     </li>
                     <hr className="border-gray-600 w-full" />
                 </ul>
