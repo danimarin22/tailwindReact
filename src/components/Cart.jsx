@@ -7,7 +7,10 @@ const Cart = () => {
 
     const updateQuantity = (index, quantity) => {
         if (quantity < 0) return
-        if (quantity === 0) removeItem(index)
+        if (quantity === 0) {
+            removeItem(index)
+            return
+        }
         if (!localStorage.getItem("cart")) {
             setProducts([])
             setQuantities([])

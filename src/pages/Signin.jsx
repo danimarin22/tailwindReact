@@ -3,7 +3,7 @@ import signIn from "../assets/images/signIn.webp"
 
 export default function SignIn() {
     return (
-        <section className="h-screen bg-gray-800">
+        <section className="h-screen bg-gray-900">
             <div className="container m-0 p-0 h-full ">
                 <div className="g-6 flex items-center lg:items-start justify-between">
                     {/* <!-- Left column container with background--> */}
@@ -15,7 +15,7 @@ export default function SignIn() {
                         />
                     </div>
                     {/* <!-- Right column container with form --> */}
-                    <div className="w-fit h-screen flex items-center justify-center px-8 lg:p-0 bg-gray-800">
+                    <div className="w-fit h-screen flex items-center justify-center px-8 lg:p-0 bg-gray-900">
                         <div>
                             <h1 className="text-3xl lg:text-4xl lg:mb-6 text-white">Log in to your account</h1>
                             <p className="text 2xl my-6 text-white">Welcome Back!</p>
@@ -23,7 +23,7 @@ export default function SignIn() {
                                 {/* <!-- Email input --> */}
                                 <input
                                     type="email"
-                                    placeholder="Email adress"
+                                    placeholder="Email address"
                                     className="mb-6 rounded w-full p-2 bg-gray-700 text-white placeholder-white border-2 border-white before:content-none h-10"
                                 ></input>
 

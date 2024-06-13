@@ -175,7 +175,7 @@ export default function Home() {
                         <div className="relative flex mt-32">
                             <img className="h-80 opacity-90 object-cover" src={fineDining} />
                             <div className="absolute h-60 flex flex-col justify-around m-5">
-                                <h1 className="text-3xl text-white lg:mb-20 ">Dinner in Amsterdam with Alessandro Mori from Il Marroneto</h1>
+                                <h1 className="text-3xl text-rose-700 opacity-90 lg:mb-20 ">Dinner in Amsterdam with Alessandro Mori from Il Marroneto</h1>
                                 <Button className="" text="Reserve your spot" />
                             </div>
                         </div>
