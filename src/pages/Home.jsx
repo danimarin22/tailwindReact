@@ -16,9 +16,11 @@ import capreolusDistilery from "../assets/images/capreolusDistilery.webp"
 import fineDining from "../assets/images/fineDining.webp"
 import pierrePeters from "../assets/images/pierrePeters.webp"
 import Cards from "../components/Cards";
+import { useRef } from "react";
 
 
 export default function Home() {
+
     const midLogo = [
         {
             id: 0,
@@ -110,7 +112,7 @@ export default function Home() {
                         <Link to={"/signin"}>
                             <Button className="mb-5" text="Get Started" />
                         </Link>
-                        <span className='text-orange-300 snap-x text-base lg:text-xl px-4 gap-2'> <Link to="/#HomeMid" >
+                        <span className='text-orange-300 snap-x text-base lg:text-xl px-4 gap-2'> <Link to="#HomeMid" >
                             Explore Crurated &gt;
                         </Link>
                         </span>
