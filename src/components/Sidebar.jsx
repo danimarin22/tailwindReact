@@ -68,6 +68,14 @@ export default function Sidebar() {
                         </a>
                     </li>
                     <hr className="border-gray-600 w-full" />
+                    <hr className="border-gray-600 w-full" />
+                    <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
+                        <a href="/cart" className="px-3 flex items-center w-full">
+                            <PiWineDuotone className="w-6 h-6 mr-2" />
+                            <span className="hidden font-light group-hover:inline lg:inline">Cart</span>
+                        </a>
+                    </li>
+                    <hr className="border-gray-600 w-full" />
                 </ul>
             }
             <div className={`relative p-3 w-full flex items-center justify-center ${isSidebarVisible ? 'block' : 'hidden'}`}>
