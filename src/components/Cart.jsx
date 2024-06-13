@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
 
 const Cart = () => {
     const [products, setProducts] = useState([])
     const [quantities, setQuantities] = useState([])
+    const [totalCost, setTotalCost] = useState("")
+    const [quantity, setQuantity] = useState(0)
 
     const updateQuantity = (index, quantity) => {
         if (quantity < 0) return
@@ -57,9 +59,28 @@ const Cart = () => {
         }
     }, [])
 
+    useEffect(() => {
+        //"$1,674" -> "1,674" -> ["1", "674"]  -> "1674" -> 1674
+        let prices = products.map((product, index) => {
+            return parseInt(product.price.substring(1).split(',').join('') * quantities[index])
+        })
+        let totalPrice = 0
+        prices.forEach(price => {
+            totalPrice += price
+        })
+        setTotalCost(totalPrice)
+
+        let totalElements = 0
+
+        for (let i = 0; i < quantities.length; i++) {
+            totalElements = totalElements + quantities[i]
+        }
+
+        setQuantity(totalElements)
+    }, [products, quantities])
+
     return (
         <section className="container mx-auto my-3 flex w-full flex-col gap-3 px-4">
-
             {products.map((x, index) => {
                 return (
                     <div key={index} className="flex w-full border px-4 py-4">
@@ -104,6 +125,7 @@ const Cart = () => {
                     </div>
                 );
             })}
+            <h2>€{totalCost}</h2>
         </section>
     );
 };
