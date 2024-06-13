@@ -16,6 +16,7 @@ import Signin from "./pages/Signin.jsx";
 import Shop from "./pages/Shop.jsx";
 import Cart from "./components/Cart.jsx";
 import ShopDetails from "./pages/ShopDetails.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const routes = createBrowserRouter(
       <Route path="shop/:id" element={<ShopDetails />} />
       <Route path="signin" element={<Signin />} />
       <Route path="cart" element={<Cart />} />
+      <Route path="aboutus" element={<AboutUs />} />
       <Route path="*" element={<div>You are not where you should</div>} />
     </Route>
   )
