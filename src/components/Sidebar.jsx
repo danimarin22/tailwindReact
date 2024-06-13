@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { FaHome, FaSearch, FaStoreAlt } from 'react-icons/fa';
 import { GiCellarBarrels } from 'react-icons/gi';
 import { LiaWineBottleSolid } from 'react-icons/lia';
@@ -72,7 +72,7 @@ export default function Sidebar() {
                     <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
                         <a href="/cart" className="px-3 flex items-center w-full">
                             <PiWineDuotone className="w-6 h-6 mr-2" />
-                            <span className="hidden font-light group-hover:inline lg:inline">Cart</span>
+                            <span className="hidden font-light group-hover:inline lg:inline">Cart 455</span>
                         </a>
                     </li>
                     <hr className="border-gray-600 w-full" />
