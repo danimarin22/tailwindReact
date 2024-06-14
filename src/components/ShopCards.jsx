@@ -1,9 +1,13 @@
 import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoListOutline } from "react-icons/io5";
+import { useEffect } from "react";
 
 export default function ShopCards({ id, category, name, img, vintage, eprice, price }) {
 
+    useEffect(() => {
+        console.log(img)
+    }, [])
     return (
         <div className="max-w-sm min-h-full border-2 border-gray-300 overflow-hidden shadow-lg group flex flex-col items-center" style={{ flex: 1 }}>
             <div className="w-full group-hover:bg-rose-900 group-hover:text-white flex justify-between items-center">
@@ -23,7 +27,7 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
                 </Link>
                 <hr className='mt-2 mb-4 w-80' />
             </div>
-            <img className="h-60 " src={img} alt="" />
+            <img className="h-60 " src={'/src' + img} alt="" />
             <div className="inset-0 flex flex-col
             items-center w-full ">
                 <div className="w-full mt-3 mb-1 flex items-center justify-between pb-3 ">
