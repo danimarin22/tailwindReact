@@ -2,8 +2,14 @@ import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoListOutline } from "react-icons/io5";
 import { useEffect } from "react";
+import img from '../assets/wineDB/BlancdeLynchBages copy.png'
 
-export default function ShopCards({ id, category, name, img, vintage, eprice, price }) {
+export default function ShopCards({ id, category, name, vintage, eprice, price }) {
+
+    useEffect(() => {
+        console.log(img)
+    }, [])
+
     return (
         <div className="max-w-sm min-h-full border-2 border-gray-300 overflow-hidden shadow-lg group flex flex-col items-center" style={{ flex: 1 }}>
             <div className="w-full group-hover:bg-rose-900 group-hover:text-white flex justify-between items-center">
