@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import imgShop from "../assets/images/shop.png"
 import ShopCards from '../components/ShopCards';
 import { FaSearch } from 'react-icons/fa';
+import { Col, Container, Row } from 'react-bootstrap';
 
 export default function Shop() {
 
@@ -54,19 +55,19 @@ export default function Shop() {
                     />
                 </div>
             </div>
-            <div className='flex lg:p-10 p-6 lg:ml-16 '>
-                <div className='grid grid-cols-1 lg:grid-cols-4 lg:gap-10 gap-6 w-full' >
+            <Container>
+                <Row>
                     {products.filter(elem => {
                         return nameFilter.trim() === "" || elem.name.toLowerCase().trim().includes(nameFilter.toLowerCase().trim())
                     }).slice((page - 1) * elementsPerPage, ((page - 1) * elementsPerPage) + elementsPerPage).map(elem => {
                         return (
-                            <div key={elem.id} >
+                            <Col key={elem.id} xl={3} lg={4} sm={6} xs={12} className='my-2 flex items-center justify-center'>
                                 <ShopCards id={elem.id} category={elem.category} name={elem.name} img={elem.img} vintage={elem.vintage} eprice={elem.estimatedPriceMarket} price={elem.price} />
-                            </div>
+                            </Col>
                         )
                     })}
-                </div>
-            </div>
+                </Row>
+            </Container>
             <div className='flex items-center justify-center m-10'>
                 <nav aria-label="Page navigation example">
                     <ul className="flex items-center -space-x-px h-10 text-base">
