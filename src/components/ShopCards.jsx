@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export default function ShopCards({ id, category, name, img, vintage, eprice, price }) {
     return (
-        <div className="max-w-sm min-h-full	border-2 border-gray-300 overflow-hidden shadow-lg group flex flex-col items-center">
+        <div className="max-w-sm min-h-full border-2 border-gray-300 overflow-hidden shadow-lg group flex flex-col items-center" style={{ flex: 1 }}>
             <div className="w-full group-hover:bg-rose-900 group-hover:text-white flex justify-between items-center">
                 <p className=" my-3 ml-3">{category}</p>
                 <div className="flex">
