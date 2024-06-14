@@ -16,7 +16,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Franc, Merlot",
-                "img": "/assets/wineDB/ChâteauAusone2023.png"
+                "img": "/src/assets/wineDB/ChâteauAusone2023.png"
             },
             {
                 "id": 2,
@@ -33,7 +33,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Merlot, Cabert Franc, Petit Verdot",
-                "img": "/assets/wineDB/ChâteauCosdEstournel2023.png"
+                "img": "/src/assets/wineDB/ChâteauCosdEstournel2023.png"
             },
             {
                 "id": 3,
@@ -50,7 +50,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Merlot, Cabernet Sauvignon, Cabernet Franc",
-                "img": "/assets/wineDB/ChâteauLaMissionHautBrion2023.png"
+                "img": "/src/assets/wineDB/ChâteauLaMissionHautBrion2023.png"
             },
             {
                 "id": 4,
@@ -67,7 +67,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Merlot, Cabernet Sauvignon, Cabernet Franc",
-                "img": "/assets/wineDB/ChâteauHautBrion2023.png"
+                "img": "/src/assets/wineDB/ChâteauHautBrion2023.png"
             },
             {
                 "id": 5,
@@ -84,7 +84,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Merlot, Cabernet Franc, Cabernet Sauvignon",
-                "img": "/assets/wineDB/ChâteauChevalBlanc2023.png"
+                "img": "/src/assets/wineDB/ChâteauChevalBlanc2023.png"
             },
             {
                 "id": 6,
@@ -101,7 +101,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Merlot",
-                "img": "/assets/wineDB/ChâteauMoutonRothschild2023.png"
+                "img": "/src/assets/wineDB/ChâteauMoutonRothschild2023.png"
             },
             {
                 "id": 7,
@@ -118,7 +118,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Merlot, Petit Verdot",
-                "img": "/assets/wineDB/ChâteauLafiteRothschild2023.png"
+                "img": "/src/assets/wineDB/ChâteauLafiteRothschild2023.png"
             },
             {
                 "id": 8,
@@ -135,7 +135,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
-                "img": "/assets/wineDB/ChâteauPontetCanet2023.png"
+                "img": "/src/assets/wineDB/ChâteauPontetCanet2023.png"
             },
             {
                 "id": 9,
@@ -152,7 +152,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Cabernet Franc, Merlot",
-                "img": "/assets/wineDB/ChâteauLéovilleLasCases2023.png"
+                "img": "/src/assets/wineDB/ChâteauLéovilleLasCases2023.png"
             },
             {
                 "id": 10,
@@ -169,7 +169,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Cabernet Franc, Merlot",
-                "img": "/assets/wineDB/ChâteauCantenacBrown2023.png"
+                "img": "/src/assets/wineDB/ChâteauCantenacBrown2023.png"
             },
             {
                 "id": 11,
@@ -186,7 +186,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Merlot",
-                "img": "/assets/wineDB/ChâteauGrandPuyLacoste.png"
+                "img": "/src/assets/wineDB/ChâteauGrandPuyLacoste.png"
             },
             {
                 "id": 12,
@@ -203,7 +203,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Merlot, Cabernet Franc, Cabernet Sauvignon",
-                "img": "/assets/wineDB/ClosFourtet2023.png"
+                "img": "/src/assets/wineDB/ClosFourtet2023.png"
             },
             {
                 "id": 13,
@@ -220,7 +220,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Merlot, Cabernet Sauvignon, Cabernet Franc",
-                "img": "/assets/wineDB/LeClarencedeHautBrion2023.png"
+                "img": "/src/assets/wineDB/LeClarencedeHautBrion2023.png"
             },
             {
                 "id": 14,
@@ -237,7 +237,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
-                "img": "/assets/wineDB/ChâteauLynchBages2023.png"
+                "img": "/src/assets/wineDB/ChâteauLynchBages2023.png"
             },
             {
                 "id": 15,
@@ -254,7 +254,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
-                "img": "/assets/wineDB/LePetitMoutondeMoutonRothschild2023.png"
+                "img": "/src/assets/wineDB/LePetitMoutondeMoutonRothschild2023.png"
             },
             {
                 "id": 16,
@@ -271,7 +271,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Merlot, Cabernet Franc, Petit Verdot",
-                "img": "/assets/wineDB/ChâteauAngelus2023.png"
+                "img": "/src/assets/wineDB/ChâteauAngelus2023.png"
             },
             {
                 "id": 17,
@@ -288,7 +288,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Merlot, Cabernet Franc, Cabernet Sauvignon",
-                "img": "/assets/wineDB/CarillondAngelus2023.png"
+                "img": "/src/assets/wineDB/CarillondAngelus2023.png"
             },
             {
                 "id": 18,
@@ -305,7 +305,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Merlot, Cabernet franc, Cabernet-Sauvignon",
-                "img": "/assets/wineDB/ChâteauLEvangile2023.png"
+                "img": "/src/assets/wineDB/ChâteauLEvangile2023.png"
             },
             {
                 "id": 19,
@@ -322,7 +322,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet Sauvignon, Merlot, Cabernet Franc",
-                "img": "/assets/wineDB/ChâteauLéovilleBarton2023.png"
+                "img": "/src/assets/wineDB/ChâteauLéovilleBarton2023.png"
             },
             {
                 "id": 20,
@@ -339,7 +339,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Cabernet-Sauvignon, Merlot, Petit Verdot",
-                "img": "/assets/wineDB/CarruadesdeLafite2023.png"
+                "img": "/src/assets/wineDB/CarruadesdeLafite2023.png"
             },
             {
                 "id": 21,
@@ -357,7 +357,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/RobertGroffierPèreFilsBonnesMaresGrandCru2021.png"
+                "img": "/src/assets/wineDB/RobertGroffierPèreFilsBonnesMaresGrandCru2021.png"
             },
             {
                 "id": 22,
@@ -375,7 +375,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/RobertGroffierPèreFilsChambertinClosdeBèzeGrandCru.png"
+                "img": "/src/assets/wineDB/RobertGroffierPèreFilsChambertinClosdeBèzeGrandCru.png"
             },
             {
                 "id": 23,
@@ -393,7 +393,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/HubertLignierClosDeLaRocheGrandCru2021.png"
+                "img": "/src/assets/wineDB/HubertLignierClosDeLaRocheGrandCru2021.png"
             },
             {
                 "id": 24,
@@ -411,7 +411,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/HubertLignierClosDeLaRocheGrandCru20213l.png"
+                "img": "/src/assets/wineDB/HubertLignierClosDeLaRocheGrandCru20213l.png"
             },
             {
                 "id": 25,
@@ -429,7 +429,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/RobertGroffierPère&FilsChambolleMusigny1erCruLesAmoureuses2019.png"
+                "img": "/src/assets/wineDB/RobertGroffierPère&FilsChambolleMusigny1erCruLesAmoureuses2019.png"
             },
             {
                 "id": 26,
@@ -447,7 +447,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/LiberPater.png"
+                "img": "/src/assets/wineDB/LiberPater.png"
             },
             {
                 "id": 27,
@@ -465,7 +465,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/LiberPater.png"
+                "img": "/src/assets/wineDB/LiberPater.png"
             },
             {
                 "id": 28,
@@ -483,7 +483,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/RobertGroffierPèreFilsChambolleMusigny1erCruLesSentiers.png"
+                "img": "/src/assets/wineDB/RobertGroffierPèreFilsChambolleMusigny1erCruLesSentiers.png"
             },
             {
                 "id": 29,
@@ -501,7 +501,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Pinot Noir",
-                "img": "/assets/wineDB/HubertLignierClosDeLaRocheGrandCru20211.5L.png"
+                "img": "/src/assets/wineDB/HubertLignierClosDeLaRocheGrandCru20211.5L.png"
             },
             {
                 "id": 30,
@@ -519,7 +519,7 @@
                 "color": "Red",
                 "typeOfWine": "Still",
                 "varietal": "Petit verdot, Cabernet franc, Cabernet sauvignon, Merlot",
-                "img": "/assets/wineDB/ChâteauLafiteRothschild.png"
+                "img": "/src/assets/wineDB/ChâteauLafiteRothschild.png"
             },
             {
                 "id": 31,
@@ -537,7 +537,7 @@
                 "color": "Rose",
                 "typeOfWine": "Sparkling",
                 "varietal": "Pinot Noir, Chardonnay",
-                "img": "/assets/wineDB/LouisRoedererCristalRoséVinothèque.png"
+                "img": "/src/assets/wineDB/LouisRoedererCristalRoséVinothèque.png"
             },
             {
                 "id": 32,
@@ -555,7 +555,7 @@
                 "color": "White",
                 "typeOfWine": "Sparkling",
                 "varietal": "Pinot Noir, Chardonnay",
-                "img": "/assets/wineDB/LouisRoedererCristalVinothèque.png"
+                "img": "/src/assets/wineDB/LouisRoedererCristalVinothèque.png"
             },
             {
                 "id": 33,
@@ -573,7 +573,7 @@
                 "color": "White",
                 "typeOfWine": "Sparkling",
                 "varietal": "Pinot Noir, Chardonnay",
-                "img": "/assets/wineDB/ClosdesGoisses.png"
+                "img": "/src/assets/wineDB/ClosdesGoisses.png"
             },
             {
                 "id": 34,
@@ -591,7 +591,7 @@
                 "color": "White",
                 "typeOfWine": "Sparkling",
                 "varietal": "Pinot Noir, Chardonnay",
-                "img": "/assets/wineDB/LouisRoedererLaMontagneLateRelease.png"
+                "img": "/src/assets/wineDB/LouisRoedererLaMontagneLateRelease.png"
             },
             {
                 "id": 35,
@@ -609,7 +609,7 @@
                 "color": "White",
                 "typeOfWine": "Sparkling",
                 "varietal": "Pinot Noir, Chardonnay",
-                "img": "/assets/wineDB/NicolasFrançois.png"
+                "img": "/src/assets/wineDB/NicolasFrançois.png"
             },
             {
                 "id": 36,
@@ -627,7 +627,7 @@
                 "color": "White",
                 "typeOfWine": "Still",
                 "varietal": "Sémillon, Sauvignon Blanc",
-                "img": "/assets/wineDB/LaMissionHautBrionBlanc.png"
+                "img": "/src/assets/wineDB/LaMissionHautBrionBlanc.png"
             },
             {
                 "id": 37,
@@ -645,7 +645,7 @@
                 "color": "White",
                 "typeOfWine": "Still",
                 "varietal": "Sauvignon Blanc",
-                "img": "/assets/wineDB/ChâteauMargauxPavillonBlanc.png"
+                "img": "/src/assets/wineDB/ChâteauMargauxPavillonBlanc.png"
             },
             {
                 "id": 38,
@@ -663,7 +663,7 @@
                 "color": "White",
                 "typeOfWine": "Still",
                 "varietal": "Semillon, Sauvignon Blanc",
-                "img": "/assets/wineDB/ChâteaudYquem.png"
+                "img": "/src/assets/wineDB/ChâteaudYquem.png"
             },
             {
                 "id": 39,
@@ -681,7 +681,7 @@
                 "color": "White",
                 "typeOfWine": "Still",
                 "varietal": "Semillon, Sauvignon Blanc",
-                "img": "/assets/wineDB/HautBrionBlanc.png"
+                "img": "/src/assets/wineDB/HautBrionBlanc.png"
             },
             {
                 "id": 40,
@@ -699,7 +699,7 @@
                 "color": "White",
                 "typeOfWine": "Still",
                 "varietal": "Sauvignon Blanc, Sémillon, Muscadelle",
-                "img": "/assets/wineDB/BlancdeLynchBages.png"
+                "img": "/src/assets/wineDB/BlancdeLynchBages.png"
             }
         ]
     }
