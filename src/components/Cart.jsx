@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
 
 const Cart = () => {

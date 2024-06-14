@@ -1,8 +1,7 @@
-import { FaRegCalendarPlus } from "react-icons/fa";
-import img from "../assets/wineDB/BlancdeLynchBages.png"
 import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoListOutline } from "react-icons/io5";
+import { useEffect } from "react";
 
 export default function ShopCards({ id, category, name, img, vintage, eprice, price }) {
     return (
@@ -35,12 +34,13 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
                     <p className="pl-3 text-s">Estimated market price:</p>
                     <Link className="text-s mr-3"> {eprice} </Link>
                 </div>
-                <Link to={`/shop/${id}`}>
-                    <button className="min-w-80 mb-3 hover:bg-rose-950 hover:text-black rounded-lg p-4 shadow-lg text-xl font-normal text-white bg-rose-900">
-                        {price}
-                    </button>
+                <Link className="w-full" to={`/shop/${id}`}>
+                    <div className="w-full flex justify-center items-center">
+                        <button className="w-5/6 mb-3 hover:bg-rose-950 hover:text-black rounded-lg p-4 shadow-lg text-xl font-normal text-white bg-rose-900">
+                            {price}
+                        </button>
+                    </div>
                 </Link>
-
             </div>
         </div>
     )
