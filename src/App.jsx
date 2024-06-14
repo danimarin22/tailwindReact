@@ -6,7 +6,6 @@ import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 import { Footer } from './components/Footer';
 
-
 function App() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false)
 
@@ -31,7 +30,9 @@ function App() {
           !isNavbarVisible ? <Sidebar /> : <Navbar />
         }
         <div className={`flex-1 ${isNavbarVisible ? 'ml-0' : 'ml-16'} transition-all duration-300 ease-in-out`}>
-          <Outlet />
+          <div className='min-h-screen'>
+            <Outlet />
+          </div>
           <Footer />
         </div>
       </div >

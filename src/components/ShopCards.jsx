@@ -1,8 +1,7 @@
-import { FaRegCalendarPlus } from "react-icons/fa";
-import img from "../assets/wineDB/BlancdeLynchBages.png"
 import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoListOutline } from "react-icons/io5";
+import { useEffect } from "react";
 
 export default function ShopCards({ id, category, name, img, vintage, eprice, price }) {
     return (
