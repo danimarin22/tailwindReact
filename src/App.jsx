@@ -5,6 +5,7 @@ import './App.css';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 import { Footer } from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false)
@@ -34,6 +35,7 @@ function App() {
             <Outlet />
           </div>
           <Footer />
+          <ScrollToTop />
         </div>
       </div >
     </>

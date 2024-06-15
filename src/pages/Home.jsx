@@ -21,6 +21,10 @@ import { useRef } from "react";
 
 export default function Home() {
 
+    const midRef = useRef(null);
+    const handleClick = () => {
+        midRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
     const midLogo = [
         {
             id: 0,
@@ -106,20 +110,20 @@ export default function Home() {
                     playsInline
                 />
                 <div className="absolute flex flex-col text-center px-5 lg:p-24 gap-y-2 lg:gap-y-5 mb-30 lg:mb-0 text-white">
-                    <p className="text-3xl lg:text-5xl opacity-80 mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</p>
+                    <h1 className="text-3xl lg:text-5xl opacity-80 mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</h1>
                     <p className="text-l lg:text-2xl opacity-50 mb-20">Your one-stop destination for the world&apos;s most sought-after bottles.</p>
                     <div className='flex flex-col lg:flex-row justify-center items-center text-center gap-10'>
                         <Link to={"/signin"}>
                             <Button className="mb-5" text="Get Started" />
                         </Link>
-                        <span className='text-orange-300 snap-x text-base lg:text-xl px-4 gap-2'> <Link to="#HomeMid" >
+                        <span className='text-orange-300 snap-x text-base lg:text-xl px-4 gap-2'> <Link onClick={handleClick}>
                             Explore Crurated &gt;
                         </Link>
                         </span>
                     </div>
                 </div>
             </div>
-            <div id="HomeMid" className="relative snap-center text-center flex justify-center items-center overflow-hidden pb-3 lg:pb-0 ">
+            <div ref={midRef} id="midRef" className="relative snap-center text-center flex justify-center items-center overflow-hidden pb-3 lg:pb-0 ">
                 <img src={homeMidBg} className="absolute top-0 left-0 w-full h-full object-cover z-0" />
                 <span className="relative w-full min-h-screen flex flex-col justify-center lg:justify-end items-center lg:gap-y-5 text-white">
                     <h1 className="text-4xl mt-3 my-2 lg:mt-80 w-72">BORDEAUX 2023 EN PRIMEUR</h1>
