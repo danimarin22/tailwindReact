@@ -7,6 +7,7 @@ import { PiWineDuotone } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
 import logo from "../assets/images/Logo2.svg"
 import DropUpSearch from './DropUpSearch';
+import { TiShoppingCart } from 'react-icons/ti';
 
 export default function Sidebar() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false)
@@ -70,7 +71,7 @@ export default function Sidebar() {
                     <hr className="border-gray-600 w-full" />
                     <li className="mb-2 rounded hover:shadow hover:text-orange-300 hover:bg-rose-900 py-2 w-full">
                         <Link to="/cart" className="px-3 flex items-center w-full">
-                            <PiWineDuotone className="w-6 h-6 mr-2" />
+                            <TiShoppingCart className="w-6 h-6 mr-2" />
                             <span className="hidden font-light group-hover:inline lg:inline">Cart 455</span>
                         </Link>
                     </li>
