@@ -50,6 +50,10 @@ export default function ShopDetails() {
                     Go back
                 </button> */}
             </div>
+            <div>
+                Shop Details with id {product.id} and name {product.name}
+                <Button text="Add to cart" onClick={AddToCart} />
+            </div>
         </div>
     )
 }
