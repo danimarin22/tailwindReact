@@ -73,10 +73,10 @@ export default function Barrels() {
                             FRONTIER OF
                             COLLECTING</h1>
                     </div>
-                    <div className="flex flex-col justify-center items-center lg:w-2/4">
+                    <div className="flex flex-col justify-center items-center  lg:w-2/4">
                         {midBarrels.map(midBarrels => (
                             <div key={midBarrels.id} className="flex flex-col items-center gap-1">
-                                <img src={midBarrels.img} className="h-14 w-14 lg:h-40 lg:w-40 mt-3 " />
+                                <img src={midBarrels.img} className="h-14 w-14 lg:h-32 lg:w-32 mt-3 " />
                                 <div className="my-0 w-4/5 lg:w-full">
                                     <h1 className="text-xl lg:text-3xl">{midBarrels.title}</h1>
                                     <p className="text-base lg:text-2xl">{midBarrels.desc}</p>
@@ -88,13 +88,13 @@ export default function Barrels() {
                 </div>
             </div>
             <div >
-                <div className="relative flex">
+                <div className="relative flex ">
                     <img src={howItWorks} className="top-0 left-0 p-0 h-screen object-cover z-0 screen" />
                     <div className="absolute flex text-center items-center justify-center flex-col h-full w-full ">
                         <div className="flex flex-col lg:flex-row items-center w-screen">
                             <div className="w-60 lg:w-2/4 flex items-center justify-center">
                                 <img src={howItWorksBarrels} className=" transition-transform
-            hover:scale-105 duration-200 " />
+            hover:scale-105 duration-200 mt-3" />
                             </div>
                             <div className="h-auto w-full flex flex-col items-center justify-center text-center ">
                                 <h1 className="lg:text-3xl text-lg text-white lg:my-20 my-2 ">EXCLUSIVELY WITH BARRELS</h1>

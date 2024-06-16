@@ -25,6 +25,7 @@ export default function Home() {
     const handleClick = () => {
         midRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
+
     const midLogo = [
         {
             id: 0,
