@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
 import { CiCircleList } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,10 @@ import logo from "../assets/images/Logo2.svg"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const homeTop = useRef(null)
+    const handleClicks = () => {
+        homeTop.current?.scrollIntoView({ behavior: "smooth" })
+    }
 
     const handleToggle = () => setIsOpen(!isOpen);
     const handleClose = () => setIsOpen(false);
@@ -14,7 +18,7 @@ export default function Navbar() {
         <nav className="bg-gray-900 px-4 py-1 flex justify-between items-center z-50 sticky top-0 overflow-invisible">
             <Link to="/" className='flex'>
                 <img className="w-8 h-8" src={logo} />
-                <span className="text-xl text-white mt-1">CruRated</span>
+                <span className="text-xl text-white mt-1"><Link onClick={handleClicks}>CruRated</Link></span>
             </Link>
             <div className="text-xl gap-1 after:content-none bg-gray-900">
                 <Dropdown show={isOpen} onToggle={handleToggle} className="bg-gray-900 ">

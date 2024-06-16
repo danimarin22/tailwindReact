@@ -32,7 +32,7 @@
                 "bottleSize": "0.75L",
                 "color": "Red",
                 "typeOfWine": "Still",
-                "varietal": "Cabernet Sauvignon, Merlot, Cabert Franc, Petit Verdot",
+                "varietal": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
                 "img": "/src/assets/wineDB/ChâteauCosdEstournel2023.png"
             },
             {
@@ -173,7 +173,7 @@
             },
             {
                 "id": 11,
-                "name": "Grand-Puy-Lacoste Variation Case",
+                "name": "Grand-Puy-Lacoste",
                 "producer": "Château Grand-Puy-Lacoste",
                 "vintage": 2023,
                 "shortDesc": "The nose is of red fruit, violets, vanilla and spices. On the palate the wine is clean, dense and fresh. The floral and red fruit notes knit with the soft and ripe tannins.",
@@ -344,7 +344,7 @@
             {
                 "id": 21,
                 "category": "PREMIUM",
-                "name": "Robert Groffier Père & Fils Bonnes-Mares Grand Cru 1.5L",
+                "name": "Robert Groffier Père & Fils Bonnes-Mares Grand Cru",
                 "producer": "Robert Groffier Père & Fils",
                 "vintage": 2021,
                 "shortDesc": "The wine has a fine texture, taste - full-bodied, silky and rounded, filled with fruity notes, hints of rose hips, spices, cherries, yellow plum, wonderful aftertaste expectancy with nuances of coffee and oak.",
@@ -380,7 +380,7 @@
             {
                 "id": 23,
                 "category": "PREMIUM",
-                "name": "Hubert Lignier Clos De La Roche Grand Cru 1.5L",
+                "name": "Hubert Lignier Clos De La Roche Grand Cru",
                 "producer": "Hubert Lignier",
                 "vintage": 2021,
                 "shortDesc": "Complex and elegant, with intense aromas of red fruits (such as cherry or raspberry) and black fruits (notably blackcurrant and blackberry). Spicy and woody notes are also perceptible, accompanied by a slight floral touch.",
@@ -398,7 +398,7 @@
             {
                 "id": 24,
                 "category": "PREMIUM",
-                "name": "Hubert Lignier Clos De La Roche Grand Cru 3L",
+                "name": "Hubert Lignier Clos De La Roche Grand Cru",
                 "producer": "Hubert Lignier",
                 "vintage": 2021,
                 "shortDesc": "Complex and elegant, with intense aromas of red fruits (such as cherry or raspberry) and black fruits (notably blackcurrant and blackberry). Spicy and woody notes are also perceptible, accompanied by a slight floral touch.",
@@ -578,7 +578,7 @@
             {
                 "id": 34,
                 "category": "PREMIUM",
-                "name": "Louis Roederer La Montagne Late Release Mini Vertical",
+                "name": "Louis Roederer La Montagne Late Release",
                 "producer": "Louis Roederer",
                 "vintage": 1995,
                 "shortDesc": "an explosion of ripe, delicate fruit with intense notes of yellow fruit from the Pinot noir complemented by sweet citrus fruits and delicate notes of white flower",
@@ -596,7 +596,7 @@
             {
                 "id": 35,
                 "category": "PREMIUM",
-                "name": "Nicolas François Vertical in Magnums",
+                "name": "Nicolas François Vertical",
                 "producer": "Champagne Billecart-Salmon",
                 "vintage": 1998,
                 "shortDesc": "A wine that strikes a great balance between its intense fruitiness and a pure steely character. It makes it a dry Champagne, with the richness of a great wine.",
@@ -650,7 +650,7 @@
             {
                 "id": 38,
                 "category": "PREMIUM",
-                "name": "Château d'Yquem Magnum Vertical",
+                "name": "Château d'Yquem Vertical",
                 "producer": "Château D'yquem",
                 "vintage": 2013,
                 "shortDesc": "The first impression of Château d'Yquem on the palate is always very silky, and often sumptuous. It then fills out, coating the palate. This fine wine has a strong, but never overbearing character, with great elegance and poise. ",
