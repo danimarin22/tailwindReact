@@ -17,6 +17,9 @@ import Shop from "./pages/Shop.jsx";
 import Cart from "./components/Cart.jsx";
 import ShopDetails from "./pages/ShopDetails.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
+import TermsAndConditions from "./pages/TermsAndConditions.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import CookiePolicy from "./pages/CookiePolicy.jsx";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +34,9 @@ const routes = createBrowserRouter(
       <Route path="signin" element={<Signin />} />
       <Route path="cart" element={<Cart />} />
       <Route path="aboutus" element={<AboutUs />} />
+      <Route path="termsandconditions" element={<TermsAndConditions />} />
+      <Route path="privacypolicy" element={<PrivacyPolicy />} />
+      <Route path="cookiepolicy" element={<CookiePolicy />} />
       <Route path="*" element={<div>You are not where you should</div>} />
     </Route>
   )

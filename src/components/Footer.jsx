@@ -18,7 +18,7 @@ export function Footer() {
                     </li>
                     <li>
                         <Link
-                            to="#"
+                            to="/termsandconditions"
                             color="blue-gray"
                             className="font-normal transition-colors text-xl text-rose-900 hover:text-rose-700 focus:text-rose-700"
                         >
@@ -27,7 +27,7 @@ export function Footer() {
                     </li>
                     <li>
                         <Link
-                            to="#"
+                            to="/privacypolicy"
                             color="blue-gray"
                             className="font-normal transition-colors text-xl text-rose-900 hover:text-rose-700 focus:text-rose-700"
                         >
@@ -36,7 +36,7 @@ export function Footer() {
                     </li>
                     <li>
                         <Link
-                            to="#"
+                            to="/cookiepolicy"
                             color="blue-gray"
                             className="font-normal transition-colors text-xl text-rose-900 hover:text-rose-700 focus:text-rose-700"
                         >
@@ -44,14 +44,14 @@ export function Footer() {
                         </Link>
                     </li>
                     <li>
-                        <Typography
-
+                        <Link
+                            onClick={() => window.location = 'mailto:hello@crurated.com'}
                             to="#"
                             color="blue-gray"
-                            className="font-normal transition-colors text-xl text-rose-500 hover:text-rose-700 focus:text-rose-700"
+                            className="font-normal transition-colors text-xl text-rose-700 hover:text-rose-700 focus:text-rose-700"
                         >
                             hello@crurated.com
-                        </Typography>
+                        </Link>
                     </li>
                 </ul>
             </div>

@@ -89,9 +89,9 @@ export default function Barrels() {
             </div>
             <div >
                 <div className="relative flex ">
-                    <img src={howItWorks} className="top-0 left-0 p-0 h-screen object-cover z-0 screen" />
+                    <img src={howItWorks} className="top-0 left-0 p-0 h-screen object-cover z-0 w-screen" />
                     <div className="absolute flex text-center items-center justify-center flex-col h-full w-full ">
-                        <div className="flex flex-col lg:flex-row items-center w-screen">
+                        <div className="flex flex-col lg:flex-row items-center w-full">
                             <div className="w-60 lg:w-2/4 flex items-center justify-center">
                                 <img src={howItWorksBarrels} className=" transition-transform
             hover:scale-105 duration-200 mt-3" />
