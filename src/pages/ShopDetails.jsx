@@ -4,10 +4,8 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import Button from '../components/Button'
 import { IoIosArrowBack } from 'react-icons/io'
 import productsData from '../assets/data.json'
-import wineSealLogo from "../assets/images/wineSealLogo.png"
 import shopDetailsSingleLot from "../assets/images/shopDetailsSingleLot.svg"
 import shopDetailsBottleSize from "../assets/images/shopDetailsBottleSize.svg"
-import ShopDetailCarousel from '../components/ShopDetailsCarousel'
 import ShopDetailsCarousel from '../components/ShopDetailsCarousel'
 
 export default function ShopDetails() {
