@@ -33,8 +33,8 @@ export default function Navbar() {
                         <hr className='border-2  bg-rose-900 w-80 text-white m-auto' />
                         <Dropdown.Item className="text-white text-center bg-transparent" ><Link to='/collections'>Collections</Link></Dropdown.Item>
                         <Dropdown.Item className="text-white text-center bg-transparent"><Link to='/barrels'>Barrels</Link></Dropdown.Item>
-                        <Dropdown.Item className="text-white text-center bg-transparent"><Link to='/shop/page/1'>Shop</Link></Dropdown.Item>
                         <Dropdown.Item className="text-white text-center bg-transparent"><Link to='/singleLots'>Single Lots</Link></Dropdown.Item>
+                        <Dropdown.Item className="text-white text-center bg-transparent"><Link to='/shop/page/1'>Shop</Link></Dropdown.Item>
                         <Dropdown.Item className="text-white text-center bg-transparent"><Link to='/signin'>Sign In</Link></Dropdown.Item>
                         <Dropdown.Item className="text-white text-center bg-transparent"><Link to='/cart'>Cart</Link></Dropdown.Item>
                     </Dropdown.Menu>

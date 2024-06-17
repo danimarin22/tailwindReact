@@ -124,7 +124,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div ref={midRef} className="relative snap-center text-center flex justify-center items-center overflow-hidden pb-3 lg:pb-0 ">
+            <div className="relative snap-center text-center flex justify-center items-center overflow-hidden pb-3 lg:pb-0 ">
                 <img src={homeMidBg} className="absolute top-0 left-0 w-full h-full object-cover z-0" />
                 <span className="relative w-full min-h-screen flex flex-col justify-center lg:justify-end items-center lg:gap-y-5 text-white">
                     <h1 className="text-4xl mt-3 my-2 lg:mt-80 w-72">BORDEAUX 2023 EN PRIMEUR</h1>
@@ -139,7 +139,7 @@ export default function Home() {
                     <Button text="Discover En Primeur" />
                 </span>
             </div>
-            <div className="flex flex-col justify-center ml-0 lg:ml-5 mt-2  ">
+            <div ref={midRef} className="flex flex-col justify-center ml-0 lg:ml-5 mt-2  ">
                 <h1 className="text-4xl m-3">Wines</h1>
                 <p className="text-2xl m-3">Discover something new each week, with our masterfully curated wine collections, fractional barrels, and single lot auctions.</p>
                 <span className="flex flex-col items-center w-full mt-3 gap-y-10 lg:mt-5 lg:gap-y-0 lg:flex-row lg:justify-around ">
