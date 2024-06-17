@@ -58,9 +58,9 @@ export default function ShopDetails() {
                 </button> */}
             </div>
             <div className='flex flex-col items-center mx-5 my-3 lg:my-0 lg:mx-0' >
-                <div className='lg:flex items-center justify-center lg:w-10/12 lg:my-32  '>
-                    <div className='lg:flex lg:flex-row lg:w-6/12 items-center justify-center flex flex-col'>
-                        <div className=''>
+                <div className='lg:flex items-center justify-center lg:w-10/12 lg:my-14  '>
+                    <div className='title flex  lg:flex-row w-full lg:w-[30%] items-center justify-center'>
+                        <div className=' flex flex-col lg:flex-col w-full '>
                             <h1 className='text-2xl mb-3 lg:text-4xl lg:m-4 '>{product.name}</h1>
                             <p className='text-xl my-3 lg:text-2xl lg:m-4 '>By : {product.producer}</p>
                             <div className='flex my-2 lg:my-3 lg:full'>
@@ -73,43 +73,45 @@ export default function ShopDetails() {
                             </div>
                         </div>
                     </div>
-                    <div className='lg:flex lg:w-6/12 flex-col lg:flex-row lg:items-center'>
-                        <div className='flex items-center justify-center'>
-                            <img src={product.img} className=' my-3 w-20 lg:w-28  align-center lg:mx-20' />
-                        </div>
-                        <div className='flex flex-col items-center justify-center my-2'>
-                            <p className='mb-3'>Shop Details with id {product.id} and name {product.name}</p>
-                            <Button text="Add to cart" onClick={AddToCart} />
-                        </div>
+                    <div className='flex  items-center justify-center'>
+                        <img src={product.img} className=' my-3 w-20 lg:w-28  align-center lg:mx-20' />
                     </div>
+                    <div className='flex flex-col w-full lg:w-[20%] items-center justify-center my-2'>
+                        <p className='mb-3'>Shop Details with id {product.id} and name {product.name}</p>
+                        <Button text="Add to cart" onClick={AddToCart} />
+                    </div>
+
                     {/* <img src={wineSealLogo} className='w-40 h-40' /> */}
                 </div >
                 <div className='flex items-center justify-center w-full'>
                     <div className='lg:w-6/12' >
                         <h1 className='my-3 lg:my-0 text-2xl lg:text-4xl'>Details</h1>
-                        <p className='lg:text-lg'>{product.desc}</p>
-                        <div className='flex items-center w-full flex-wrap lg:flex-nowrap flex-row lg:flex-row lg:justify-center lg:items-center'>
-                            <div className='flex flex-col my-4 lg:my-0 lg:w-1/3'>
-                                <div className='my-3 lg:my-10 '>
+                        <p className='lg:text-lg lg:mt-10'>{product.desc}</p>
+                        <div className='flex items-center w-full flex-wrap lg:!flex-nowrap flex-row lg:flex-row lg:justify-center lg:items-center'>
+
+                            <div className='flex flex-col my-4 lg:my-0 lg:w-[33%]'>
+                                <div className='my-3 lg:my-10 w-full'>
                                     <p>Country/Region</p>
                                     <p className='font-bold'>{product.region}</p>
                                 </div>
-                                <div>
+                                <div className='w-full'>
                                     <p>Color</p>
                                     <p className='font-bold'>{product.color}</p>
                                 </div>
                             </div>
-                            <div className='m-4 lg:m-4 lg:w-1/3'>
-                                <div className=' my-3 lg:my-10'>
+
+                            <div className='m-4 lg:m-4 lg:w-[33%]'>
+                                <div className=' my-3 lg:my-10 w-full'>
                                     <p>Alcohol level</p>
                                     <p className='font-bold'>{product.alcoholLevel}</p>
                                 </div>
-                                <div>
+                                <div className='w-full'>
                                     <p>Type of wine</p>
                                     <p className='font-bold'>{product.typeOfWine}</p>
                                 </div>
                             </div>
-                            <div className='lg:m-4 lg:w-1/3  '>
+
+                            <div className='lg:m-4 lg:w-[33%]  '>
                                 <div className='my-3 lg:my-10'>
                                     <p>Bottle size</p>
                                     <p className='font-bold'>{product.bottleSize}</p>
@@ -120,7 +122,7 @@ export default function ShopDetails() {
                                 </div>
                             </div>
                         </div>
-                        <div className='h-80 my-20'>
+                        <div className='my-6 lg:mb-14'>
                             <ShopDetailsCarousel />
                         </div>
                     </div>
