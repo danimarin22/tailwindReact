@@ -2,116 +2,37 @@ import shopDetailCarousel1 from "../assets/images/shopDetailCarousel1.webp";
 import shopDetailCarousel2 from "../assets/images/shopDetailCarousel2.webp";
 import shopDetailCarousel3 from "../assets/images/shopDetailCarousel3.webp";
 
-import { TECarousel, TECarouselItem } from "tw-elements-react";
+import Carousel from 'react-bootstrap/Carousel';
 
-export default function shopDetailCarousel() {
+
+function ShopDetailCarousel() {
     return (
-        <>
-            <TECarousel
-                showControls
-                showIndicators
-                crossfade
-                ride="carousel"
-                prevBtnIcon={
-                    <>
-                        <span className="inline-block text-black h-8 w-8 [&>svg]:h-8">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M15.75 19.5L8.25 12l7.5-7.5"
-                                />
-                            </svg>
-                        </span>
-                        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-                            Previous
-                        </span>
-                    </>
-                }
-                nextBtnIcon={
-                    <>
-                        <span className="inline-block text-black h-8 w-8 [&>svg]:h-8">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                                />
-                            </svg>
-                        </span>
-                        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-                            Next
-                        </span>
-                    </>
-                }
-                theme={{
-                    indicator:
-                        "mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none",
-                }}
-            >
-                <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-                    <TECarouselItem
-                        itemID={1}
-                        className="relative float-left -mr-[100%] w-full !transform-none transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-                    >
-                        <img
-                            src={shopDetailCarousel1}
-                            className="block w-full h-20 lg:h-80 "
-                            alt="..."
-                        />
-                        <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
-                            <h5 className="text-xl">First slide label</h5>
-                            <p>
-                                Some representative placeholder content for the first slide.
-                            </p>
-                        </div>
-                    </TECarouselItem>
-                    <TECarouselItem
-                        itemID={2}
-                        className="relative float-left -mr-[100%]  w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-                    >
-                        <img
-                            src={shopDetailCarousel3}
-                            className="block w-full h-20 lg:h-80 "
-                            alt="..."
-                        />
-                        <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
-                            <h5 className="text-xl">Second slide label</h5>
-                            <p>
-                                Some representative placeholder content for the second slide.
-                            </p>
-                        </div>
-                    </TECarouselItem>
-                    <TECarouselItem
-                        itemID={3}
-                        className="relative  float-left -mr-[100%] h-80 w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-                    >
-                        <img
-                            src={shopDetailCarousel2}
-                            className="block w-full h-screen object-cover lg:h-80 "
-                            alt="..."
-                        />
-                        <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
-                            <h5 className="text-xl">Third slide label</h5>
-                            <p>
-                                Some representative placeholder content for the third slide.
-                            </p>
-                        </div>
-                    </TECarouselItem>
-                </div>
-            </TECarousel>
-        </>
+        <Carousel>
+            <Carousel.Item className="object-cover">
+                <img src={shopDetailCarousel1} />
+                <Carousel.Caption>
+                    <h3 className="hidden lg:block lg:text-4xl">Exquisite Chateau Wines</h3>
+                    <p className="hidden lg:block lg:text-2xl">Chateau wines: rich heritage, exquisite flavors, exceptional quality, timeless elegance.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item className="object-cover">
+                <img src={shopDetailCarousel2} />
+                <Carousel.Caption>
+                    <h3 className="hidden lg:block lg:text-4xl">Heritage Chateau Wines</h3>
+                    <p className="hidden lg:block lg:text-2xl">Chateau wines: refined taste, historic vineyards, unparalleled craftsmanship, luxurious indulgence.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img src={shopDetailCarousel3} />
+                <Carousel.Caption>
+                    <h3 className="hidden lg:block lg:text-4xl">Refined Chateau Wines</h3>
+                    <p className="hidden lg:block lg:text-2xl">
+                        Chateau wines: refined elegance, rich flavors, historic vineyards, exceptional quality
+                    </p>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel>
     );
 }
+
+export default ShopDetailCarousel;

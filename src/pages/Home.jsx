@@ -124,7 +124,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div ref={midRef} id="midRef" className="relative snap-center text-center flex justify-center items-center overflow-hidden pb-3 lg:pb-0 ">
+            <div ref={midRef} className="relative snap-center text-center flex justify-center items-center overflow-hidden pb-3 lg:pb-0 ">
                 <img src={homeMidBg} className="absolute top-0 left-0 w-full h-full object-cover z-0" />
                 <span className="relative w-full min-h-screen flex flex-col justify-center lg:justify-end items-center lg:gap-y-5 text-white">
                     <h1 className="text-4xl mt-3 my-2 lg:mt-80 w-72">BORDEAUX 2023 EN PRIMEUR</h1>
@@ -186,7 +186,6 @@ export default function Home() {
                                 <Button className="" text="Reserve your spot" />
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
