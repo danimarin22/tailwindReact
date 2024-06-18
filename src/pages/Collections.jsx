@@ -61,7 +61,7 @@ export default function Collections() {
             <Button onClick={handleClick} text="Explore Collections" />
         </div>
         <div className=" flex text-center justify-center w-full">
-            <img src={heroSub} className="relative h-screen object-cover lg:h-max w-full " />
+            <img src={heroSub} className="relative h-screen object-contain lg:h-max w-full " />
             <div className="absolute flex flex-col ">
                 <h1 className="text-3xl my-14 lg:my-20">HOW IT WORKS?</h1>
                 <div className="flex flex-col items-center md:flex-row md:text-base lg:flex-row lg:gap-20  ">

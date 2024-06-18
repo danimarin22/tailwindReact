@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react";
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
@@ -9,6 +9,10 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false)
+  const [overflowHiddenPaths, setOverflowHiddenPaths] = useState([
+    "/signin"
+  ])
+  const { pathname } = useLocation();
 
   const handleResize = () => {
     if (window.innerWidth < 800) {
@@ -22,7 +26,7 @@ function App() {
   useEffect(() => {
     handleResize()
     window.addEventListener('resize', handleResize)
-  }, [])
+  })
 
   return (
     <>
@@ -30,7 +34,12 @@ function App() {
         {
           !isNavbarVisible ? <Sidebar /> : <Navbar />
         }
-        <div className={`flex-1 ${isNavbarVisible ? 'ml-0' : 'ml-16'} transition-all duration-300 ease-in-out`}>
+        <div className={`flex-1 ${isNavbarVisible ? 'ml-0' : 'ml-16'} transition-all duration-300 ease-in-out`} style={
+          overflowHiddenPaths.includes(pathname) ? {
+            height: '100vh',
+            overflow: 'hidden'
+          } : {}
+        }>
           <div className='min-h-screen'>
             <Outlet />
           </div>

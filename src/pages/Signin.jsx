@@ -1,11 +1,24 @@
 import { TERipple } from "tw-elements-react";
 import signIn from "../assets/images/signIn.webp"
+import SignInModal from "../components/SignInModal";
+import { useState } from "react";
 
 export default function SignIn() {
+    const [password, setPassword] = useState("")
+    const [mail, setMail] = useState("")
+    const [trigger, setTrigger] = useState(false)
+    const [isSocial, setIsSocial] = useState(false)
+
+    const popup = () => {
+        if (password && mail) {
+            setTrigger(true)
+        }
+    }
+
     return (
-        <section className="h-screen bg-gray-900">
+        <section className="h-screen  bg-gray-900">
             <div className="container m-0 p-0 h-full ">
-                <div className="g-6 flex items-center lg:items-start justify-between">
+                <div className="g-6 relative flex items-center lg:items-start justify-between">
                     {/* <!-- Left column container with background--> */}
                     <div className="">
                         <img
@@ -15,7 +28,7 @@ export default function SignIn() {
                         />
                     </div>
                     {/* <!-- Right column container with form --> */}
-                    <div className="w-fit h-screen flex items-center justify-center px-8 lg:p-0 bg-gray-900">
+                    {!trigger ? (<div className="w-fit h-screen flex items-center justify-center px-8 lg:p-0 bg-gray-900">
                         <div>
                             <h1 className="text-3xl lg:text-4xl lg:mb-6 text-white">Log in to your account</h1>
                             <p className="text 2xl my-6 text-white">Welcome Back!</p>
@@ -24,6 +37,8 @@ export default function SignIn() {
                                 <input
                                     type="email"
                                     placeholder="Email address"
+                                    value={mail}
+                                    onChange={(e) => setMail(e.target.value)}
                                     className="mb-6 rounded w-full p-2 bg-gray-700 text-white placeholder-white border-2 border-white before:content-none h-10"
                                 ></input>
 
@@ -31,6 +46,8 @@ export default function SignIn() {
                                 <input
                                     type="password"
                                     placeholder="Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     className="mb-6  w-full rounded p-2 bg-gray-700 text-white placeholder-white border-2 border-white before:content-none h-10"
                                     size="lg"
                                 ></input>
@@ -55,10 +72,9 @@ export default function SignIn() {
 
                                     {/* <!-- Forgot password link --> */}
                                     <a
-                                        href="#!"
                                         className="transition duration-150 ease-in-out hover:text-primary-600 text-rose-900 focus:text-rose-900 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
                                     >
-                                        Forgot password?
+                                        Forgot password
                                     </a>
                                 </div>
 
@@ -67,6 +83,10 @@ export default function SignIn() {
                                 <TERipple className="w-full">
                                     <button
                                         type="button"
+                                        onClick={() => {
+                                            popup()
+                                            setIsSocial(false)
+                                        }}
                                         className="mb-3 flex w-full items-center justify-center rounded bg-rose-900 px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#000000] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                                     >
                                         Sign in
@@ -82,10 +102,14 @@ export default function SignIn() {
 
                                 {/* <!-- Social login buttons --> */}
                                 <TERipple rippleColor="light" className="w-full">
-                                    <a
+                                    <button
                                         className="mb-3 flex w-full items-center justify-center rounded bg-rose-950 px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#000000] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                                        href="#!"
                                         role="button"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            setTrigger(true)
+                                            setIsSocial(true)
+                                        }}
                                     >
                                         {/* <!-- Facebook --> */}
                                         <svg
@@ -97,13 +121,17 @@ export default function SignIn() {
                                             <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                                         </svg>
                                         Continue with Facebook
-                                    </a>
+                                    </button>
                                 </TERipple>
                                 <TERipple rippleColor="light" className="w-full">
-                                    <a
+                                    <button
                                         className="mb-1 lg:mb-3 flex w-full items-center justify-center rounded bg-rose-950 px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#000000] transition duration-150 ease-in-out hover:bg-info-600 hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:bg-info-600 focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:bg-info-700 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]"
-                                        href="#!"
                                         role="button"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            setTrigger(true)
+                                            setIsSocial(true)
+                                        }}
                                     >
                                         {/* <!-- Twitter --> */}
                                         <svg
@@ -115,11 +143,21 @@ export default function SignIn() {
                                             <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                                         </svg>
                                         Continue with Twitter
-                                    </a>
+                                    </button>
                                 </TERipple>
                             </form>
                         </div>
-                    </div>
+                        <div>
+                        </div>
+                    </div>) : (
+                        <div className="absolute">
+                            <SignInModal>
+                                <div className="absolute flex flex-col h-full">
+                                    <h3 className="text-white text-3xl lg:text-6xl">Welcome Back {isSocial ? '' : ','} {mail}</h3>
+                                </div>
+                            </SignInModal>
+                        </div>
+                    )}
                 </div>
             </div>
         </section >
