@@ -224,7 +224,7 @@ export default function TermsAndConditions() {
 
                     </div>
                     <div className="flex ml-5 mt-5 justify-end items-center ">
-                        <img src={wineSealLogo} alt="" className="w-2/4 lg:w-2/12 transition-transform
+                        <img src={wineSealLogo} alt="" className="w-[60%] lg:w-[15%] transition-transform
             hover:scale-105 duration-200" />
                     </div>
                 </div>
