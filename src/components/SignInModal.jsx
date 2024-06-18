@@ -1,23 +1,25 @@
 import modalImg from "../assets/images/modularSignIn.png"
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import ModularButton from "./ModularButton";
+import Button from "./Button";
+import RedButton from "./RedButton";
 
 export default function SignInModal(props) {
-    return (props.trigger) ? (
+    return (
         <div className="popup absolute backdrop-blur-lg bg-opacity- bg-transparent h-screen w-screen flex items-center justify-center">
-            <div className="popup-inner bg-rose-950  w-5/6 h-5/6 border-black border-8 flex flex-col items-center justify-center">
-
+            <div className="popup-inner bg-white w-5/6 h-5/6 flex flex-col items-center justify-center">
                 {props.children}
-                <div className="flex flex-col items-center justify-center w-full h-4/6 border-black border-8">
+                <div className="flex flex-col items-center justify-center w-full h-4/6 ">
 
-                    <div className="w-5/6 flex items-center justify-around border-black border-8 " >
-                        <Link className="w-3/6" to="/">
-                            <ModularButton text="Go to home" />
-                        </Link>
-                        <Link to="/shop/page/1">
-                            <ModularButton text="Go to shop" />
-                        </Link>
+                    <div className="w-full h-full">
+                        <div className="h-full w-full flex flex-col lg:flex-row items-center justify-around " >
+                            <Link className="" to="/">
+                                <RedButton text="Go to home" />
+                            </Link>
+                            <Link to="/shop/page/1">
+                                <RedButton className="" text="Go to shop" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <div className="flex justify-end w-full">
@@ -25,10 +27,9 @@ export default function SignInModal(props) {
                 </div>
             </div>
         </div>
-    ) : "";
+    )
 }
 
 SignInModal.propTypes = {
-    trigger: PropTypes.bool.isRequired,
     children: PropTypes.node
 };

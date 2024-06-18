@@ -41,15 +41,15 @@ export default function Shop() {
                 </div>
             </div>
             <div className='my-3'>
-                <p className='my-3 ml-3 text-4xl'>Shop</p>
-                <div className='relative text-center flex items-center justify-center lg:justify-start'>
-                    <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                        <FaSearch className="w-4 h-4 ml-8 text-black" />
-                    </span>
+                <p className='my-3 lg:!my-14 ml-[7%] text-4xl'>Shop</p>
+                <div className='relative text-center flex items-center justify-start lg:justify-start'>
+
+                    <FaSearch className="absolute w-4 h-4 ml-[9%] lg:w-[13%] lg:mb-[1%] lg:ml-8 text-black" />
+
                     <input
                         type="text"
                         placeholder="Search product"
-                        className="w-80 px-6 py-2 pl-10 lg:ml-6 rounded border-2 focus:outline-none"
+                        className=" px-6 py-2 pl-10 ml-[7%] lg:mb-5 rounded border-2 focus:outline-none"
                         value={nameFilter}
                         onChange={(e) => setNameFilter(e.target.value)}
                     />

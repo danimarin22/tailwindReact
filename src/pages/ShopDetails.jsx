@@ -7,6 +7,7 @@ import productsData from '../assets/data.json'
 import shopDetailsSingleLot from "../assets/images/shopDetailsSingleLot.svg"
 import shopDetailsBottleSize from "../assets/images/shopDetailsBottleSize.svg"
 import ShopDetailsCarousel from '../components/ShopDetailsCarousel'
+import { TiShoppingCart } from 'react-icons/ti'
 
 export default function ShopDetails() {
     let products = productsData[0].products;
@@ -46,9 +47,12 @@ export default function ShopDetails() {
 
     return (
         <>
-            <div className='flex items-center bg-rose-900 h-10 lg:h-20'>
+            <div className='flex items-center justify-between bg-rose-900 h-10 lg:h-20'>
                 <Link onClick={() => navigate(-1)}>
                     <IoIosArrowBack className='mx-3 lg:mx-10 w-5 lg:w-10 h-5 lg:h-10 text-gray-900' />
+                </Link>
+                <Link to="/cart">
+                    <TiShoppingCart className="text-orange-300 mr-4 h-6 w-6 lg:w-10 lg:h-10" />
                 </Link>
 
                 {/* <button className="text-red-600 bg-gray-700 hover:bg-red-600 hover:text-gray-700  rounded w-40 h-10" onClick={() => navigate(-1)}>

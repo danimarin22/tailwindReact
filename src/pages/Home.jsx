@@ -111,7 +111,7 @@ export default function Home() {
                     playsInline
                 />
                 <div className="absolute flex flex-col text-center px-5 lg:p-24 gap-y-2 lg:gap-y-5 mb-30 lg:mb-0 text-white">
-                    <h1 className="text-3xl lg:text-5xl opacity-80 mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</h1>
+                    <h1 className="text-3xl lg:text-5xl opacity-80 mb-10 lg:mb-20">UNCORK A WORLD OF CURATED EXPERIENCES</h1>
                     <p className="text-l lg:text-2xl opacity-50 mb-20">Your one-stop destination for the world&apos;s most sought-after bottles.</p>
                     <div className='flex flex-col lg:flex-row justify-center items-center text-center gap-10'>
                         <Link to={"/signin"}>

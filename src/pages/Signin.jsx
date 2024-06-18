@@ -28,7 +28,7 @@ export default function SignIn() {
                         />
                     </div>
                     {/* <!-- Right column container with form --> */}
-                    <div className="w-fit h-screen flex items-center justify-center px-8 lg:p-0 bg-gray-900">
+                    {!trigger ? (<div className="w-fit h-screen flex items-center justify-center px-8 lg:p-0 bg-gray-900">
                         <div>
                             <h1 className="text-3xl lg:text-4xl lg:mb-6 text-white">Log in to your account</h1>
                             <p className="text 2xl my-6 text-white">Welcome Back!</p>
@@ -149,16 +149,16 @@ export default function SignIn() {
                         </div>
                         <div>
                         </div>
-                    </div>
-                    <div className="absolute">
-                        <SignInModal trigger={trigger}>
-                            <div className="absolute flex flex-col h-full">
-                                <h3 className="text-white text-6xl">Welcome Back {isSocial ? '' : ','} {mail}</h3>
-                            </div>
-                        </SignInModal>
-                    </div>
+                    </div>) : (
+                        <div className="absolute">
+                            <SignInModal>
+                                <div className="absolute flex flex-col h-full">
+                                    <h3 className="text-white text-3xl lg:text-6xl">Welcome Back {isSocial ? '' : ','} {mail}</h3>
+                                </div>
+                            </SignInModal>
+                        </div>
+                    )}
                 </div>
-
             </div>
         </section >
     );
