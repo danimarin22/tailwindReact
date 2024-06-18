@@ -7,6 +7,7 @@ export default function SignIn() {
     const [password, setPassword] = useState("")
     const [mail, setMail] = useState("")
     const [trigger, setTrigger] = useState(false)
+    const [isSocial, setIsSocial] = useState(false)
 
     const popup = () => {
         if (password && mail) {
@@ -82,7 +83,10 @@ export default function SignIn() {
                                 <TERipple className="w-full">
                                     <button
                                         type="button"
-                                        onClick={() => popup()}
+                                        onClick={() => {
+                                            popup()
+                                            setIsSocial(false)
+                                        }}
                                         className="mb-3 flex w-full items-center justify-center rounded bg-rose-900 px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#000000] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                                     >
                                         Sign in
@@ -104,6 +108,7 @@ export default function SignIn() {
                                         onClick={(e) => {
                                             e.preventDefault()
                                             setTrigger(true)
+                                            setIsSocial(true)
                                         }}
                                     >
                                         {/* <!-- Facebook --> */}
@@ -125,6 +130,7 @@ export default function SignIn() {
                                         onClick={(e) => {
                                             e.preventDefault()
                                             setTrigger(true)
+                                            setIsSocial(true)
                                         }}
                                     >
                                         {/* <!-- Twitter --> */}
@@ -147,7 +153,7 @@ export default function SignIn() {
                     <div className="absolute">
                         <SignInModal trigger={trigger}>
                             <div className="absolute flex flex-col h-full">
-                                <h3 className="text-white text-6xl">Welcome Back, {mail}</h3>
+                                <h3 className="text-white text-6xl">Welcome Back {isSocial ? '' : ','} {mail}</h3>
                             </div>
                         </SignInModal>
                     </div>
