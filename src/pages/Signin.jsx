@@ -1,11 +1,23 @@
 import { TERipple } from "tw-elements-react";
 import signIn from "../assets/images/signIn.webp"
+import SignInModal from "../components/SignInModal";
+import { useState } from "react";
 
 export default function SignIn() {
+    const [password, setPassword] = useState("")
+    const [mail, setMail] = useState("")
+    const [trigger, setTrigger] = useState(false)
+
+    const popup = () => {
+        if (password && mail) {
+            setTrigger(true)
+        }
+    }
+
     return (
-        <section className="h-screen bg-gray-900">
+        <section className="h-screen  bg-gray-900">
             <div className="container m-0 p-0 h-full ">
-                <div className="g-6 flex items-center lg:items-start justify-between">
+                <div className="g-6 relative flex items-center lg:items-start justify-between">
                     {/* <!-- Left column container with background--> */}
                     <div className="">
                         <img
@@ -24,6 +36,9 @@ export default function SignIn() {
                                 <input
                                     type="email"
                                     placeholder="Email address"
+                                    required
+                                    value={mail}
+                                    onChange={(e) => setMail(e.target.value)}
                                     className="mb-6 rounded w-full p-2 bg-gray-700 text-white placeholder-white border-2 border-white before:content-none h-10"
                                 ></input>
 
@@ -31,6 +46,9 @@ export default function SignIn() {
                                 <input
                                     type="password"
                                     placeholder="Password"
+                                    required
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     className="mb-6  w-full rounded p-2 bg-gray-700 text-white placeholder-white border-2 border-white before:content-none h-10"
                                     size="lg"
                                 ></input>
@@ -67,6 +85,7 @@ export default function SignIn() {
                                 <TERipple className="w-full">
                                     <button
                                         type="button"
+                                        onClick={() => popup()}
                                         className="mb-3 flex w-full items-center justify-center rounded bg-rose-900 px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#000000] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                                     >
                                         Sign in
@@ -82,7 +101,7 @@ export default function SignIn() {
 
                                 {/* <!-- Social login buttons --> */}
                                 <TERipple rippleColor="light" className="w-full">
-                                    <a
+                                    <button
                                         className="mb-3 flex w-full items-center justify-center rounded bg-rose-950 px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#000000] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                                         href="#!"
                                         role="button"
@@ -97,7 +116,7 @@ export default function SignIn() {
                                             <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                                         </svg>
                                         Continue with Facebook
-                                    </a>
+                                    </button>
                                 </TERipple>
                                 <TERipple rippleColor="light" className="w-full">
                                     <a
@@ -119,9 +138,20 @@ export default function SignIn() {
                                 </TERipple>
                             </form>
                         </div>
+                        <div>
+                        </div>
+                    </div>
+                    <div className="absolute">
+                        <SignInModal trigger={trigger}>
+                            <div className="absolute flex flex-col h-full">
+                                <h3 className="text-white text-6xl">Welcome Back, {mail}</h3>
+                            </div>
+                        </SignInModal>
                     </div>
                 </div>
+
             </div>
+
         </section >
     );
 }
