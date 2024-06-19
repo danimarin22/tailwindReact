@@ -21,6 +21,7 @@ import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import CookiePolicy from "./pages/CookiePolicy.jsx";
 import CheckoutForm from "./components/CheckoutForm.jsx";
+import CheckOutConfirm from "./components/CheckOutConfirm.jsx";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +36,7 @@ const routes = createBrowserRouter(
       <Route path="signin" element={<Signin />} />
       <Route path="cart" element={<Cart />} />
       <Route path="checkoutform" element={<CheckoutForm />} />
+      <Route path="checkoutconfirm" element={<CheckOutConfirm />} />
       <Route path="aboutus" element={<AboutUs />} />
       <Route path="termsandconditions" element={<TermsAndConditions />} />
       <Route path="privacypolicy" element={<PrivacyPolicy />} />
