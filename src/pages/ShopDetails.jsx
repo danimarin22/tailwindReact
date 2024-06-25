@@ -8,18 +8,22 @@ import shopDetailsSingleLot from "../assets/images/shopDetailsSingleLot.svg"
 import shopDetailsBottleSize from "../assets/images/shopDetailsBottleSize.svg"
 import ShopDetailsCarousel from '../components/ShopDetailsCarousel'
 import { TiShoppingCart } from 'react-icons/ti'
+import { Overlay, Popover } from 'react-bootstrap'
 
 export default function ShopDetails() {
     let products = productsData[0].products;
     const { id } = useParams()
     const [product, setProduct] = useState({})
+    const [target, setTarget] = useState(null)
+    const [isVisiblePopover, setIsVisiblePopover] = useState(false)
+
     const navigate = useNavigate()
 
     useEffect(() => {
         setProduct(allProducts[0]['products'].filter(elem => elem.id === parseInt(id))[0])
     }, [id])
 
-    function AddToCart() {
+    function AddToCart(event) {
         if (!localStorage.getItem(("cart"))) {
             const cart = [
                 {
@@ -43,6 +47,12 @@ export default function ShopDetails() {
             }
             localStorage.setItem('cart', JSON.stringify(cart))
         }
+
+        setIsVisiblePopover(true)
+        setTarget(event.target)
+        setTimeout(() => {
+            setIsVisiblePopover(false)
+        }, 1000)
     }
 
     return (
@@ -82,6 +92,18 @@ export default function ShopDetails() {
                         <p className='mb-3'>Shop Details with id {product.id} and name {product.name}</p>
                         <Button text="Add to cart" onClick={AddToCart} />
                     </div>
+                    <Overlay
+                        show={isVisiblePopover}
+                        target={target}
+                        placement="top"
+                        containerPadding={20}
+                    >
+                        <Popover id="popover-contained">
+                            <Popover.Body>
+                                Added to cart
+                            </Popover.Body>
+                        </Popover>
+                    </Overlay>
 
                     {/* <img src={wineSealLogo} className='w-40 h-40' /> */}
                 </div >

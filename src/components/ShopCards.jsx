@@ -2,7 +2,11 @@ import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoListOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
-import { Overlay, Popover } from "react-bootstrap";
+import { Dropdown, Overlay, Popover } from "react-bootstrap";
+import { FaFacebook } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { BsTwitterX } from "react-icons/bs";
+import { AiFillGoogleCircle } from "react-icons/ai";
 
 export default function ShopCards({ id, category, name, img, vintage, eprice, price, desc }) {
 
@@ -28,7 +32,18 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
                         <IoListOutline className="w-6 h-6 my-3 mr-3" />
                     </Link>
                     <Link>
-                        <CiShare2 className="w-6 h-6 my-3 mr-3" />
+                        <Dropdown>
+                            <Dropdown.Toggle variant="light" id="dropdown-basic" className="bg-transparent border-0 after:content-none">
+                                <CiShare2 className="w-6 h-6 my-3 mr-3" />
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1"><FaFacebook /></Dropdown.Item>
+                                <Dropdown.Item href="#/action-2"><RiInstagramFill /></Dropdown.Item>
+                                <Dropdown.Item href="#/action-3"><BsTwitterX /></Dropdown.Item>
+                                <Dropdown.Item href="#/action-4"><AiFillGoogleCircle /></Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </Link>
                 </div>
             </div>
@@ -43,7 +58,7 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
             items-center w-full ">
                 <div className="w-full mt-3 mb-1 flex items-center justify-between pb-3 ">
                     <p className='ml-3'>Vintage : {vintage}</p>
-                    <button className="mr-3 text-base text-rose-900" onClick={handleClick}>View Details</button>
+                    <button className="mr-3 text-base text-rose-900 z-0" onClick={handleClick}>View Details</button>
                 </div>
                 <Overlay
                     show={isVisibleDesc}
