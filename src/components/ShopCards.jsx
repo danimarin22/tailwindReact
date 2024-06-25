@@ -1,9 +1,19 @@
 import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoListOutline } from "react-icons/io5";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Overlay, Popover } from "react-bootstrap";
 
-export default function ShopCards({ id, category, name, img, vintage, eprice, price }) {
+export default function ShopCards({ id, category, name, img, vintage, eprice, price, desc }) {
+
+    const [isVisibleDesc, setIsVisibleDesc] = useState(false)
+    const [target, setTarget] = useState(null);
+
+    const handleClick = (event) => {
+        setIsVisibleDesc(!isVisibleDesc);
+        setTarget(event.target);
+    };
+
 
     useEffect(() => {
         console.log(img)
@@ -33,8 +43,21 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
             items-center w-full ">
                 <div className="w-full mt-3 mb-1 flex items-center justify-between pb-3 ">
                     <p className='ml-3'>Vintage : {vintage}</p>
-                    <Link className="mr-3 text-base text-rose-900"> View Details </Link>
+                    <button className="mr-3 text-base text-rose-900" onClick={handleClick}>View Details</button>
                 </div>
+                <Overlay
+                    show={isVisibleDesc}
+                    target={target}
+                    placement="top"
+                    containerPadding={20}
+                >
+                    <Popover id="popover-contained">
+                        <Popover.Header as="h3">{name}</Popover.Header>
+                        <Popover.Body>
+                            {desc}
+                        </Popover.Body>
+                    </Popover>
+                </Overlay>
                 <div className="w-full  flex items-center justify-between pb-3 ">
                     <p className="pl-3 text-s">Estimated market price:</p>
                     <Link className="text-s mr-3"> {eprice} </Link>

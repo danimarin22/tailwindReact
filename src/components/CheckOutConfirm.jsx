@@ -4,6 +4,9 @@ export default function CheckOutConfirm() {
 
     const [userDetails, setUserDetails] = useState({})
     const [checkoutCart, setCheckoutCart] = useState([])
+    const total = (a, b) => {
+        return ((a * 1) * (b * 1));
+    };
 
     useEffect(() => {
         let data = JSON.parse(localStorage.getItem("userDetails"))
@@ -23,10 +26,10 @@ export default function CheckOutConfirm() {
             </div>
             <hr className="w-full" />
             <div>
-                <div className='lg:w-4/6 mb-5 lg:mb-0 lg:my-20'>
+                <div className='flex flex-col  items-center justify-center lg:w-4/6 mb-5 lg:mb-0 lg:my-20'>
                     {checkoutCart.map((x, index) => {
                         return (
-                            <div key={index} className="flex w-full border my-4 lg:my-10 px-4 py-4">
+                            <div key={index} className="flex w-10/12 lg:w-full border my-1 lg:my-10 px-4 py-4">
                                 <img
                                     className="self-start object-contain w-32 h-32"
                                     src={x.img}
@@ -37,9 +40,11 @@ export default function CheckOutConfirm() {
                                         <p className="text-xl font-bold">{x.name}</p>
                                     </div>
 
-                                    <p className="py-3 text-xl font-bold text-violet-900">
+                                    <p className="pt-3 pb-1 text-xl font-bold text-violet-900">
                                         {x.price}
                                     </p>
+                                    <p>{x.count} Bottles</p>
+                                    <p>Total: {total(x.price, x.count)}</p>
                                     <div className="mt-2 flex w-full items-center justify-between">
 
                                     </div>
@@ -49,6 +54,8 @@ export default function CheckOutConfirm() {
                     })}
                 </div>
             </div>
+
         </div>
+
     )
 }

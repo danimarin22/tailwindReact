@@ -27,7 +27,6 @@ const routes = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
-
       <Route path="collections" element={<Collections />} />
       <Route path="barrels" element={<Barrels />} />
       <Route path="singleLots" element={<SingleLots />} />
