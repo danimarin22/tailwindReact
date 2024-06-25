@@ -4,8 +4,8 @@ export default function CheckOutConfirm() {
 
     const [userDetails, setUserDetails] = useState({})
     const [checkoutCart, setCheckoutCart] = useState([])
-    const total = (a, b) => {
-        return ((a * 1) * (b * 1));
+    const total = (price, count) => {
+        return parseInt(price.split(",").join("").substring(1)) * count
     };
 
     useEffect(() => {
