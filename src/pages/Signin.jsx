@@ -152,7 +152,7 @@ export default function SignIn() {
                     </div>) : (
                         <div className="absolute">
                             <SignInModal>
-                                <div className="absolute flex flex-col h-full">
+                                <div className="absolute flex flex-col h-full z-0">
                                     <h3 className="text-white text-3xl lg:text-6xl">Welcome Back {isSocial ? '' : ','} {mail}</h3>
                                 </div>
                             </SignInModal>
