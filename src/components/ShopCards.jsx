@@ -7,6 +7,8 @@ import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { BsTwitterX } from "react-icons/bs";
 import { AiFillGoogleCircle } from "react-icons/ai";
+import Svgfb from "../assets/images/Svgfb.svg"
+import Svgig from "../assets/images/Svgig.svg"
 
 export default function ShopCards({ id, category, name, img, vintage, eprice, price, desc }) {
 
@@ -33,15 +35,14 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
                     </Link>
                     <Link>
                         <Dropdown>
-                            <Dropdown.Toggle variant="light" id="dropdown-basic" className="bg-transparent border-0 after:content-none">
+                            <Dropdown.Toggle variant="light" id="dropdown-basic" className="bg-transparent p-0 border-0 after:content-none group-hover:text-white text-center">
                                 <CiShare2 className="w-6 h-6 my-3 mr-3" />
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1"><FaFacebook /></Dropdown.Item>
-                                <Dropdown.Item href="#/action-2"><RiInstagramFill /></Dropdown.Item>
-                                <Dropdown.Item href="#/action-3"><BsTwitterX /></Dropdown.Item>
-                                <Dropdown.Item href="#/action-4"><AiFillGoogleCircle /></Dropdown.Item>
+                            <Dropdown.Menu className="text-center">
+                                <Dropdown.Item className="px-20" href="#/action-1"><img src={Svgfb} /></Dropdown.Item>
+                                <Dropdown.Item className="px-20" href="#/action-2"><img src={Svgig} /></Dropdown.Item>
+                                <Dropdown.Item className="px-20" href="#/action-3"><BsTwitterX /></Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     </Link>
@@ -58,7 +59,7 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
             items-center w-full ">
                 <div className="w-full mt-3 mb-1 flex items-center justify-between pb-3 ">
                     <p className='ml-3'>Vintage : {vintage}</p>
-                    <button className="mr-3 text-base text-rose-900 z-0" onClick={handleClick}>View Details</button>
+                    <button className="mr-3 text-base text-rose-900 " onClick={handleClick}>View Details</button>
                 </div>
                 <Overlay
                     show={isVisibleDesc}
@@ -66,7 +67,7 @@ export default function ShopCards({ id, category, name, img, vintage, eprice, pr
                     placement="top"
                     containerPadding={20}
                 >
-                    <Popover id="popover-contained">
+                    <Popover id="popover-contained" className="z-0">
                         <Popover.Header as="h3">{name}</Popover.Header>
                         <Popover.Body>
                             {desc}
