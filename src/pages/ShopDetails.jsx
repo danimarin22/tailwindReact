@@ -52,7 +52,7 @@ export default function ShopDetails() {
         setTarget(event.target)
         setTimeout(() => {
             setIsVisiblePopover(false)
-        }, 1000)
+        }, 900)
     }
 
     return (
