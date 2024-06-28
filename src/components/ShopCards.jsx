@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import { IoListOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { Dropdown, Overlay, Popover } from "react-bootstrap";
-import { FaFacebook } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
 import { BsTwitterX } from "react-icons/bs";
-import { AiFillGoogleCircle } from "react-icons/ai";
 import Svgfb from "../assets/images/Svgfb.svg"
 import Svgig from "../assets/images/Svgig.svg"
 

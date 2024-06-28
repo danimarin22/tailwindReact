@@ -6,7 +6,7 @@ import RedButton from "./RedButton";
 export default function SignInModal(props) {
     return (
         <div className="popup absolute backdrop-blur-lg bg-opacity- bg-transparent h-screen w-screen flex items-center justify-center ">
-            <div className="popup-inner bg-white w-5/6 h-5/6 flex flex-col items-center justify-center">
+            <div className="popup-inner bg-white w-5/6 h-5/6 lg:w-3/6 lg:h-3/6 flex flex-col items-center justify-center">
                 {props.children}
                 <div className="flex flex-col items-center justify-center w-full h-4/6 ">
 

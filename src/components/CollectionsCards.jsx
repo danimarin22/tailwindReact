@@ -1,6 +1,10 @@
+import { Dropdown } from "react-bootstrap";
+import { BsTwitterX } from "react-icons/bs";
 import { CiShare2 } from "react-icons/ci";
 import { IoListOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Svgfb from "../assets/images/Svgfb.svg"
+import Svgig from "../assets/images/Svgig.svg"
 
 export default function CollectionsCards({ name, desc, img }) {
     return (
@@ -21,7 +25,17 @@ export default function CollectionsCards({ name, desc, img }) {
                             <IoListOutline className="w-6 h-6 mb-4 lg:my-3 lg:mr-56" />
                         </Link>
                         <Link>
-                            <CiShare2 className="w-6 h-6 lg:my-3 lg:mr-8" />
+                            <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic" className="bg-transparent p-0 border-0 after:content-none text-center">
+                                    <CiShare2 className="w-6 h-6 my-3 mr-3" />
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu className="text-center">
+                                    <Dropdown.Item className="px-20" href="#/action-1"><img src={Svgfb} /></Dropdown.Item>
+                                    <Dropdown.Item className="px-20" href="#/action-2"><img src={Svgig} /></Dropdown.Item>
+                                    <Dropdown.Item className="px-20" href="#/action-3"><BsTwitterX /></Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </Link>
                     </div>
                     <button className="lg:w-80 lg:m-20 hover:bg-rose-950 hover:opacity-90 hover:text-black rounded-lg p-4 shadow-lg text-xl font-normal text-white bg-rose-900">

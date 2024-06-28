@@ -89,7 +89,7 @@ export default function ShopDetails() {
                         <img src={product.img} className=' my-3 w-20 lg:w-28  align-center lg:mx-20' />
                     </div>
                     <div className='flex flex-col w-full lg:w-[20%] items-center justify-center my-2'>
-                        <p className='mb-3'>Shop Details with id {product.id} and name {product.name}</p>
+
                         <Button text="Add to cart" onClick={AddToCart} />
                     </div>
                     <Overlay

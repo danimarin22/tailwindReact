@@ -10,14 +10,14 @@ export default function Cards({ imgSrc, title, date, desc }) {
         setIsModalVisible(true)
         setTimeout(() => {
             setIsModalVisible(false)
-        }, 1500)
+        }, 2000)
     }
 
     return (
         <div className='max-w-sm relative'>
             {isModalVisible && (
                 <div className='flex flex-col justify-center items-center absolute w-full h-full bg-white bg-opacity-75 z-1'>
-                    <IoIosCheckmarkCircle className='text-green-500 h-28 w-28 ' />
+                    <IoIosCheckmarkCircle className='text-green-800 h-28 w-28 ' />
                     <h3 className='text-3xl lg:mb-5 mb-5'>Event added to calendar</h3>
                 </div>
             )}
