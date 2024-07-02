@@ -62,7 +62,6 @@ const Cart = () => {
     }, [])
 
     useEffect(() => {
-        //"$1,674" -> "1,674" -> ["1", "674"]  -> "1674" -> 1674
         let prices = products.map((product, index) => {
             return parseInt(product.price.substring(1).split(',').join('') * quantities[index])
         })
