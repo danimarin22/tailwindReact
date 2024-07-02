@@ -1,6 +1,7 @@
 import Button from "../components/Button.jsx"
 import { useEffect, useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
+import { PiShippingContainerFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
@@ -8,6 +9,7 @@ const Cart = () => {
     const [quantities, setQuantities] = useState([])
     const [totalCost, setTotalCost] = useState("")
     const [quantity, setQuantity] = useState(0)
+    const [shipping, setShipping] = useState(100)
 
     const updateQuantity = (index, quantity) => {
         if (quantity < 0) return
@@ -80,6 +82,10 @@ const Cart = () => {
         setQuantity(totalElements)
     }, [products, quantities])
 
+    useEffect(() => {
+        setShipping(totalCost > 5000 ? 0 : 100)
+    }, [totalCost])
+
     return (
         <section className="container mx-auto my-3 flex w-full items-center flex-col gap-3 px-4">
             <div>
@@ -140,7 +146,7 @@ const Cart = () => {
                     <div className='text-lg w-full flex flex-col lg:items-end justify-end'>
                         <div className='lg:my-10 my-3 flex flex-row w-[100%] lg:w-[50%] justify-around '>
                             <h2>Shipping </h2>
-                            <h2>€ 25</h2>
+                            <h2>€{shipping}</h2>
                         </div>
                         <hr className='w-full lg:w-[50%]' />
                         <div className='lg:my-10 my-3 flex flex-row w-[100%] lg:w-[50%] justify-around '>
@@ -151,7 +157,7 @@ const Cart = () => {
                         <div className="w-full lg:w-[50%] flex flex-col">
                             <div className='lg:my-10 my-3 flex flex-row justify-around '>
                                 <h2>Total </h2>
-                                <h2>€{totalCost}</h2>
+                                <h2>€{totalCost + shipping}</h2>
                             </div>
                             <div className="flex flex-col items-center my-5">
                                 <Link to="/checkoutform">
